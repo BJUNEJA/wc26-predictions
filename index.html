@@ -20,6 +20,7 @@ nav a{margin-right:20px;text-decoration:none;color:#E9EFEA;opacity:.85} nav a:ho
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
 .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:12.5px;color:var(--mut);font-weight:600;box-shadow:var(--shadow)}
 .chip b{color:var(--goldD);font-size:15px;margin-right:6px;font-family:Archivo,Inter,sans-serif}
+abbr{text-decoration:underline dotted var(--sage);text-underline-offset:3px;cursor:help}
 img.flag{vertical-align:-3px;border-radius:2px;box-shadow:0 0 0 1px var(--line);margin:0 6px 0 0}
 .teams img.flag{vertical-align:-2px;margin:0 8px}
 h2{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:20px;margin:36px 0 4px;letter-spacing:-.01em}
@@ -88,9 +89,14 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 <nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
 </div></header><main class="wrap"><div class="chips"><span class="chip"><b>2</b>matches tomorrow</span><span class="chip"><b>60%</b>holdout accuracy</span><span class="chip"><b>13/16</b>2014 knockouts</span></div>
 <h2>Matchday: 2026-06-11</h2>
-<p class="note">Predictions lock before kickoff. Last build: 2026-06-10 17:42 UTC.</p>
+<p class="note">Predictions lock before kickoff. Last build: 2026-06-10 19:04 UTC.</p>
 <div class="card"><div class="meta"><span class="tag g">Group A</span><span class="tag">2026-06-11</span><span class="tag">Mexico City, Mexico</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/mx.png" srcset="https://flagcdn.com/w56/mx.png 2x" width="28" alt="" loading="lazy">Mexico<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/za.png" srcset="https://flagcdn.com/w56/za.png 2x" width="28" alt="" loading="lazy">South Africa</div><div class="bignum"><b>81%</b><span>Mexico by 2</span></div></div><p class="pickline">Predicted outcome: <b>Mexico wins</b> with goal difference of 2. Confidence score 0.81 (max 1).</p><div class="bar"><i style="width:80.6%;background:var(--gold)"></i><i style="width:14.1%;background:var(--sage)"></i><i style="width:5.3%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/mx.png" srcset="https://flagcdn.com/w48/mx.png 2x" width="24" alt="" loading="lazy"> <b>Mexico</b> 81% · draw 14% · <img class="flag" src="https://flagcdn.com/w24/za.png" srcset="https://flagcdn.com/w48/za.png 2x" width="24" alt="" loading="lazy"> <b>South Africa</b> 5%</div><details><summary>How the model got here</summary><table>
-<tr><th></th><th class="num">Elo</th><th class="num">Attack (gf/25)</th><th class="num">Defence (ga/25)</th><th class="num">Form (gd/10)</th><th>Venue</th></tr>
+<tr><th></th>
+<th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
+<th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
+<th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
+<th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
+<th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
 <tr><td><b>Mexico</b></td><td class="num">1995&nbsp;(+100 host)</td>
 <td class="num">1.60</td><td class="num">0.76</td><td class="num">+1.20</td>
 <td rowspan="2">Mexico City</td></tr>
@@ -109,7 +115,12 @@ EloDiff +437, AttDiff -0.12, DefDiff +0.08, FormDiff +0.70, HomeFlag 1.</p><p cl
 <p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 2.5 vs 0.5 goals,
 so the predicted margin is 2.5 − 0.5 ≈ 2.
 Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div><div class="card"><div class="meta"><span class="tag g">Group A</span><span class="tag">2026-06-11</span><span class="tag">Zapopan, Mexico</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/kr.png" srcset="https://flagcdn.com/w56/kr.png 2x" width="28" alt="" loading="lazy">South Korea<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/cz.png" srcset="https://flagcdn.com/w56/cz.png 2x" width="28" alt="" loading="lazy">Czech Republic</div><div class="bignum"><b>48%</b><span>South Korea by 1</span></div></div><p class="pickline">Predicted outcome: <b>South Korea wins</b> with goal difference of 1. Confidence score 0.48 (max 1).</p><div class="bar"><i style="width:47.6%;background:var(--gold)"></i><i style="width:27.2%;background:var(--sage)"></i><i style="width:25.3%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/kr.png" srcset="https://flagcdn.com/w48/kr.png 2x" width="24" alt="" loading="lazy"> <b>South Korea</b> 48% · draw 27% · <img class="flag" src="https://flagcdn.com/w24/cz.png" srcset="https://flagcdn.com/w48/cz.png 2x" width="24" alt="" loading="lazy"> <b>Czech Republic</b> 25%</div><details><summary>How the model got here</summary><table>
-<tr><th></th><th class="num">Elo</th><th class="num">Attack (gf/25)</th><th class="num">Defence (ga/25)</th><th class="num">Form (gd/10)</th><th>Venue</th></tr>
+<tr><th></th>
+<th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
+<th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
+<th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
+<th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
+<th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
 <tr><td><b>South Korea</b></td><td class="num">1908</td>
 <td class="num">1.88</td><td class="num">0.88</td><td class="num">+0.30</td>
 <td rowspan="2">Zapopan (neutral)</td></tr>
@@ -133,9 +144,9 @@ Weights come from each model's Brier score on 2,535 held-out internationals (202
 <p class="note"><a href="schedule.html">Full 72-match outlook and complete scorecard →</a></p>
 <div class="sub-box" id="subscribe"><h2>Every matchday's predictions by email</h2>
 <p class="note">One email per matchday. Unsubscribe anytime.</p>
-<form action="https://buttondown.com/api/emails/embed-subscribe/YOUR_NEWSLETTER" method="post" target="popupwindow">
+<form action="https://buttondown.com/api/emails/embed-subscribe/bhupinder_singh" method="post" target="popupwindow">
 <input type="email" name="email" placeholder="you@example.com" required>
 <button type="submit">Subscribe</button></form>
 <p class="note" style="margin-top:10px">Prefer a feed? <a href="feed.xml">RSS</a> updates with every build.</p></div></main>
-<footer><div class="wrap">UB Analytics · Bhupinder Juneja UB Analytics · Bhupinder &amp; Ujjal Mukherjee ·amp; Ujjal Mukherjee · an educational exercise for BA 2551 and MBA 6121 at the Carlson School of Management, not betting advice. Data: martj42/international_results (CC0). 2014 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a>.</div></footer>
+<footer><div class="wrap">UB Analytics · Not betting advice · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
 </body></html>

@@ -20,6 +20,7 @@ nav a{margin-right:20px;text-decoration:none;color:#E9EFEA;opacity:.85} nav a:ho
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
 .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:12.5px;color:var(--mut);font-weight:600;box-shadow:var(--shadow)}
 .chip b{color:var(--goldD);font-size:15px;margin-right:6px;font-family:Archivo,Inter,sans-serif}
+abbr{text-decoration:underline dotted var(--sage);text-underline-offset:3px;cursor:help}
 img.flag{vertical-align:-3px;border-radius:2px;box-shadow:0 0 0 1px var(--line);margin:0 6px 0 0}
 .teams img.flag{vertical-align:-2px;margin:0 8px}
 h2{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:20px;margin:36px 0 4px;letter-spacing:-.01em}
@@ -88,63 +89,64 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 <nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
 </div></header><main class="wrap">
 <h2>The pipeline at a glance</h2>
-<p class="note">For students: this is the whole machine. Everything below is detail inside one of these boxes.</p>
+<p class="note">The whole machine in one picture; click any box to jump to its detail.</p>
 <svg class="schematic" viewBox="0 0 920 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline schematic">
 <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
 <path d="M0,0L10,5L0,10z" fill="#F2B632"/></marker></defs>
-<style>.b{fill:#0A2E23;stroke:#F2B632;stroke-width:1.5;rx:10}.t{fill:#F5F1E6;font:700 13px Verdana,sans-serif}.s{fill:#9AB8AD;font:11px Verdana,sans-serif}.a{stroke:#F2B632;stroke-width:2;marker-end:url(#ar);fill:none}.m{fill:#0A2E23;stroke:#9AB8AD;stroke-width:1.2;rx:8}</style>
-<rect class="b" x="10" y="95" width="150" height="80" rx="10"/>
+<style>.b{fill:#0A2E23;stroke:#F2B632;stroke-width:1.5;rx:10;transition:stroke-width .15s}.t{fill:#F5F1E6;font:700 13px Verdana,sans-serif}.s{fill:#9AB8AD;font:11px Verdana,sans-serif}.a{stroke:#F2B632;stroke-width:2;marker-end:url(#ar);fill:none}.m{fill:#0A2E23;stroke:#9AB8AD;stroke-width:1.2;rx:8;transition:stroke-width .15s}a:hover .b,a:hover .m{stroke-width:3.5;cursor:pointer}</style>
+<a href="#data"><rect class="b" x="10" y="95" width="150" height="80" rx="10"/>
 <text class="t" x="85" y="125" text-anchor="middle">49,400 matches</text>
 <text class="s" x="85" y="143" text-anchor="middle">internationals 1872–2026</text>
-<text class="s" x="85" y="159" text-anchor="middle">(open data, CC0)</text>
+<text class="s" x="85" y="159" text-anchor="middle">(open data, CC0)</text></a>
 <path class="a" d="M160,135 H210"/>
-<rect class="b" x="212" y="95" width="160" height="80" rx="10"/>
+<a href="#data"><rect class="b" x="212" y="95" width="160" height="80" rx="10"/>
 <text class="t" x="292" y="120" text-anchor="middle">Strength engine</text>
 <text class="s" x="292" y="138" text-anchor="middle">Elo · Attack · Defence</text>
-<text class="s" x="292" y="154" text-anchor="middle">Form · host flag</text>
+<text class="s" x="292" y="154" text-anchor="middle">Form · host flag</text></a>
 <path class="a" d="M372,135 H422"/>
-<rect class="b" x="424" y="95" width="130" height="80" rx="10"/>
+<a href="#features"><rect class="b" x="424" y="95" width="130" height="80" rx="10"/>
 <text class="t" x="489" y="125" text-anchor="middle">5 features</text>
 <text class="s" x="489" y="143" text-anchor="middle">team differences,</text>
-<text class="s" x="489" y="159" text-anchor="middle">one row per match</text>
+<text class="s" x="489" y="159" text-anchor="middle">one row per match</text></a>
 <path class="a" d="M554,115 C590,70 600,60 628,52"/>
 <path class="a" d="M554,135 H628"/>
 <path class="a" d="M554,155 C590,200 600,210 628,218"/>
-<rect class="m" x="630" y="25" width="130" height="50" rx="8"/>
+<a href="#models"><rect class="m" x="630" y="25" width="130" height="50" rx="8"/>
 <text class="t" x="695" y="46" text-anchor="middle" font-size="12">Logistic</text>
-<text class="s" x="695" y="62" text-anchor="middle">win/draw/loss</text>
-<rect class="m" x="630" y="110" width="130" height="50" rx="8"/>
+<text class="s" x="695" y="62" text-anchor="middle">win/draw/loss</text></a>
+<a href="#models"><rect class="m" x="630" y="110" width="130" height="50" rx="8"/>
 <text class="t" x="695" y="131" text-anchor="middle" font-size="12">Random forest</text>
-<text class="s" x="695" y="147" text-anchor="middle">nonlinear vote</text>
-<rect class="m" x="630" y="195" width="130" height="50" rx="8"/>
+<text class="s" x="695" y="147" text-anchor="middle">nonlinear vote</text></a>
+<a href="#models"><rect class="m" x="630" y="195" width="130" height="50" rx="8"/>
 <text class="t" x="695" y="216" text-anchor="middle" font-size="12">Poisson</text>
-<text class="s" x="695" y="232" text-anchor="middle">goals → scoreline</text>
+<text class="s" x="695" y="232" text-anchor="middle">goals → scoreline</text></a>
 <path class="a" d="M760,50 C795,60 800,100 815,118"/>
 <path class="a" d="M760,135 H815"/>
 <path class="a" d="M760,220 C795,210 800,170 815,152"/>
-<rect class="b" x="817" y="100" width="95" height="70" rx="10"/>
+<a href="#ensemble"><rect class="b" x="817" y="100" width="95" height="70" rx="10"/>
 <text class="t" x="864" y="128" text-anchor="middle" font-size="12">Weighted</text>
 <text class="t" x="864" y="144" text-anchor="middle" font-size="12">ensemble</text>
-<text class="s" x="864" y="160" text-anchor="middle">P(W/D/L) + margin</text>
+<text class="s" x="864" y="160" text-anchor="middle">P(W/D/L) + margin</text></a>
 <text class="s" x="489" y="270" text-anchor="middle">Weights set by out-of-sample Brier score (2024–26 holdout) · predictions frozen before kickoff · scorecard public</text>
 </svg>
-<h2>1 · Data and strength engine</h2>
-<p class="note">Training data is the open martj42 dataset: 15,514 internationals since 2010 enter the model (both sides with 10+ prior matches), drawn from 49,400 since 1872 used to compute strength. SPI is gone (FiveThirtyEight ceased publication in 2025), so strength is <b>Elo computed from scratch</b>: expected score E = 1/(1+10<sup>−ΔR/400</sup>); update ΔR = K·G·(result − E); K weighted by competition (60 World Cup, 50 continental, 40 qualifiers, 20 friendlies); G a goal-difference multiplier (1, 1.5, then (11+gd)/8); +100 for a true home side. Attack and Defence are rolling goals for/against over each team's last 25 matches; Form is mean goal difference over the last 10.</p>
-<h2>2 · Features: each match becomes five numbers</h2>
+<h2 id="data">1 · Data and strength engine</h2>
+<p class="note">Training data is the open <a href="https://github.com/martj42/international_results">martj42/international_results</a> dataset: 15,514 internationals since 2010 enter the model (both sides with 10+ prior matches), drawn from 49,400 since 1872 used to compute strength. SPI is gone (FiveThirtyEight ceased publication in 2025), so strength is <b>Elo computed from scratch</b> (Elo 1978; conventions follow <a href="https://www.eloratings.net/about">World Football Elo Ratings</a>): expected score E = 1/(1+10<sup>−ΔR/400</sup>); update ΔR = K·G·(result − E); K weighted by competition (60 World Cup, 50 continental, 40 qualifiers, 20 friendlies); G a goal-difference multiplier (1, 1.5, then (11+gd)/8); +100 for a true home side. Attack and Defence are rolling goals for/against over each team's last 25 matches; Form is mean goal difference over the last 10.</p>
+<h2 id="features">2 · Features: each match becomes five numbers</h2>
 <p class="note">Exactly as in 2014, the models see only pre-match <i>differences</i>: EloDiff, AttDiff, DefDiff, FormDiff, HomeFlag. The scatterplot matrix below is the same EDA call we published in 2014 (car::scatterplotMatrix), on the 2026 features.</p>
 <img class="fig" src="img_scatter.png" alt="Scatterplot matrix of engineered features">
-<h2>3 · Three models, three philosophies</h2>
-<p class="note">A multinomial <b>logistic regression</b> (the classroom workhorse: interpretable coefficients), a <b>random forest</b> (nonlinear interactions, no functional form), and a <b>double Poisson</b> scoreline model: two GLMs predict each side's goal rate, the outer product of the two Poisson pmfs gives the full score matrix, and summing its triangles yields win/draw/loss. The Poisson model is the only one that can articulate <i>how</i> a draw happens, the 2014 system's blind spot, and it supplies the predicted goal difference (μ<sub>home</sub> − μ<sub>away</sub>, rounded).</p>
+<h2 id="models">3 · Three models</h2>
+<p class="note">A multinomial <b>logistic regression</b> (interpretable coefficients), a <b>random forest</b> (nonlinear interactions, no functional form), and a <b>double Poisson</b> scoreline model: two GLMs predict each side's goal rate, the outer product of the two Poisson pmfs gives the full score matrix, and summing its triangles yields win/draw/loss. The Poisson model is the only one that can articulate <i>how</i> a draw happens, and it supplies the predicted goal difference (μ<sub>home</sub> − μ<sub>away</sub>, rounded).</p>
+<p class="note">Original papers, all downloadable: logistic regression, <a href="https://doi.org/10.1111/j.2517-6161.1958.tb00292.x">Cox (1958), "The Regression Analysis of Binary Sequences," JRSS B 20(2)</a>; random forests, <a href="https://doi.org/10.1023/A:1010933404324">Breiman (2001), "Random Forests," Machine Learning 45(1)</a>; Poisson football scorelines, <a href="https://doi.org/10.1111/j.1467-9574.1982.tb00782.x">Maher (1982), "Modelling Association Football Scores," Statistica Neerlandica 36(3)</a>, refined by <a href="https://doi.org/10.1111/1467-9876.00065">Dixon &amp; Coles (1997), JRSS C 46(2)</a>.</p>
 <table><tr><th>Feature</th><th class="num">β away</th><th class="num">β draw</th><th class="num">β home</th></tr><tr><td>EloDiff</td><td class="num">-0.862</td><td class="num">-0.002</td><td class="num">+0.864</td></tr><tr><td>AttDiff</td><td class="num">+0.063</td><td class="num">-0.001</td><td class="num">-0.062</td></tr><tr><td>DefDiff</td><td class="num">-0.046</td><td class="num">-0.008</td><td class="num">+0.054</td></tr><tr><td>FormDiff</td><td class="num">-0.074</td><td class="num">+0.013</td><td class="num">+0.061</td></tr><tr><td>HomeFlag</td><td class="num">+0.006</td><td class="num">-0.007</td><td class="num">+0.001</td></tr></table>
 <p class="note">Standardized multinomial coefficients. One standard deviation of Elo advantage moves the home-win logit by +0.86.</p>
 <img class="fig" src="img_importance.png" alt="Random forest feature importance">
-<h2>4 · Honest evaluation, then the ensemble</h2>
-<p class="note">Unlike 2014, where we fit and predicted within the same tournament, every number below is strictly out of sample: trained through 2023, scored on all 2,535 internationals from January 2024 to June 2026. The ensemble weights components by inverse holdout Brier: logistic 0.34, random forest 0.33, Poisson 0.33.</p>
+<h2 id="ensemble">4 · Honest evaluation, then the ensemble</h2>
+<p class="note">Unlike 2014, where we fit and predicted within the same tournament, every number below is strictly out of sample: trained through 2023, scored on all 2,535 internationals from January 2024 to June 2026. The ensemble weights components by inverse holdout Brier score (<a href="https://doi.org/10.1175/1520-0493(1950)078%3C0001:VOFEIT%3E2.0.CO;2">Brier 1950, Monthly Weather Review 78(1)</a>): logistic 0.34, random forest 0.33, Poisson 0.33.</p>
 <table><tr><th>Model</th><th class="num">Accuracy</th><th class="num">Brier ↓</th><th class="num">Log loss ↓</th></tr><tr><td>Logistic</td><td class="num">59.8%</td><td class="num">0.5105</td><td class="num">0.8668</td></tr><tr><td>Random Forest</td><td class="num">59.8%</td><td class="num">0.5128</td><td class="num">0.8726</td></tr><tr><td>Poisson</td><td class="num">59.6%</td><td class="num">0.5128</td><td class="num">0.8721</td></tr><tr><td>Ensemble</td><td class="num">59.8%</td><td class="num">0.5107</td><td class="num">0.8681</td></tr></table>
 <p class="note">Reference points: predicting base rates every time scores Brier 0.636; a uniform coin-flip model scores 0.667. Draws are the hard class; roughly a quarter of internationals end level and no public model predicts them well.</p>
 <h2>5 · Current strength estimates</h2>
 <img class="fig" src="img_elo.png" alt="Elo top 20">
 <h2>6 · Lineage and classroom use</h2>
-<p class="note">The 2014 system scraped Soccerwiki for player-derived ratings, added FiveThirtyEight's SPI, imputed shot differentials with random forests, and ensembled GLM, random forest, and SVM; it called Germany over Argentina in the final. Archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a>. Each box in the schematic maps to a module in BA 2551 (Business Statistics in R) and MBA 6121 (Data Analysis for Managers); the companion R lab reproduces this entire page with glm, multinom, and randomForest.</p></main>
-<footer><div class="wrap">UB Analytics · Bhupinder Juneja UB Analytics · Bhupinder &amp; Ujjal Mukherjee ·amp; Ujjal Mukherjee · an educational exercise for BA 2551 and MBA 6121 at the Carlson School of Management, not betting advice. Data: martj42/international_results (CC0). 2014 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a>.</div></footer>
+<p class="note">The 2014 system scraped Soccerwiki for player-derived ratings, added FiveThirtyEight's SPI, imputed shot differentials with random forests, and ensembled GLM, random forest, and SVM; it called Germany over Argentina in the final. 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a>.</p></main>
+<footer><div class="wrap">UB Analytics · Not betting advice · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
 </body></html>

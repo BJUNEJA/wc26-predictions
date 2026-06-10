@@ -20,6 +20,7 @@ nav a{margin-right:20px;text-decoration:none;color:#E9EFEA;opacity:.85} nav a:ho
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
 .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:12.5px;color:var(--mut);font-weight:600;box-shadow:var(--shadow)}
 .chip b{color:var(--goldD);font-size:15px;margin-right:6px;font-family:Archivo,Inter,sans-serif}
+abbr{text-decoration:underline dotted var(--sage);text-underline-offset:3px;cursor:help}
 img.flag{vertical-align:-3px;border-radius:2px;box-shadow:0 0 0 1px var(--line);margin:0 6px 0 0}
 .teams img.flag{vertical-align:-2px;margin:0 8px}
 h2{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:20px;margin:36px 0 4px;letter-spacing:-.01em}
@@ -99,5 +100,5 @@ document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('clic
  document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
  const g=b.dataset.g;document.querySelectorAll('#sched tr[data-g]').forEach(t=>{t.style.display=(g==='all'||t.dataset.g===g)?'':'none'});}));
 </script></main>
-<footer><div class="wrap">UB Analytics · Bhupinder Juneja UB Analytics · Bhupinder &amp; Ujjal Mukherjee ·amp; Ujjal Mukherjee · an educational exercise for BA 2551 and MBA 6121 at the Carlson School of Management, not betting advice. Data: martj42/international_results (CC0). 2014 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a>.</div></footer>
+<footer><div class="wrap">UB Analytics · Not betting advice · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
 </body></html>
