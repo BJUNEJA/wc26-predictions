@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About us · UB Analytics</title><meta name="description" content="The people behind twelve years of public World Cup predictions.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F7F3;--card:#FFFFFF;--ink:#15291F;--mut:#5B6E63;--green:#1B5E40;--green2:#0E3B2E;
+--gold:#E8A317;--goldD:#B97E08;--red:#D94F2B;--sage:#9DB4A8;--line:#E3E8E2;--shadow:0 1px 2px rgba(21,41,31,.06),0 6px 18px rgba(21,41,31,.07)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,-apple-system,'Segoe UI',sans-serif}
+a{color:var(--green)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{background:var(--green2);color:#F5F1E6;padding:26px 0 18px}
+.kick{font-weight:700;font-size:11px;letter-spacing:.2em;color:var(--sage);text-transform:uppercase}
+h1{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:clamp(26px,4.6vw,40px);line-height:1.05;letter-spacing:-.01em;margin:.3em 0 .15em}
+h1 .y{color:var(--gold)}
+.sub{color:#C9D6CE;max-width:60ch;font-size:15px}
+nav{margin-top:16px;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+nav a{margin-right:20px;text-decoration:none;color:#E9EFEA;opacity:.85} nav a:hover{opacity:1;color:var(--gold)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:12.5px;color:var(--mut);font-weight:600;box-shadow:var(--shadow)}
+.chip b{color:var(--goldD);font-size:15px;margin-right:6px;font-family:Archivo,Inter,sans-serif}
+img.flag{vertical-align:-3px;border-radius:2px;box-shadow:0 0 0 1px var(--line);margin:0 6px 0 0}
+.teams img.flag{vertical-align:-2px;margin:0 8px}
+h2{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:20px;margin:36px 0 4px;letter-spacing:-.01em}
+.note{color:var(--mut);font-size:13.5px;margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:16px 0;box-shadow:var(--shadow)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tag{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px 11px;font-size:11.5px;font-weight:600;color:var(--mut)}
+.tag.g{color:var(--green);border-color:#CBDCD2;background:#EEF5F0}
+.duel{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.teams{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:clamp(19px,3.4vw,25px)}
+
+.teams .vs{color:var(--sage);font-weight:600;font-size:.7em;margin:0 .35em}
+.bignum{text-align:right;line-height:1}
+.bignum b{font-family:Archivo,Inter,sans-serif;font-size:clamp(26px,4.4vw,36px);font-weight:800;color:var(--goldD)}
+.bignum span{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:4px}
+.pickline{font-size:15px;margin:10px 0 2px}
+.pickline b{color:var(--green)}
+.actline{font-size:14.5px;margin:4px 0 0;font-weight:600}
+.actline.hit{color:var(--green)} .actline.miss{color:var(--red)}
+.bar{height:12px;border-radius:6px;overflow:hidden;display:flex;margin:12px 0 6px;background:var(--bg)}
+.bar i{display:block;height:100%}
+.legend{font-size:12px;color:var(--mut)} .legend b{color:var(--ink)}
+details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--green)}
+summary:hover{color:var(--goldD)}
+details table{margin-top:10px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:700}
+tr:nth-child(even) td{background:#FAFBF8}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+td.hit{color:var(--green);font-weight:600} td.miss{color:var(--red);font-weight:600}
+.verdict{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--sage);border-radius:12px;padding:14px 18px;margin:10px 0;box-shadow:var(--shadow)}
+.verdict.hit{border-left-color:var(--green)} .verdict.miss{border-left-color:var(--red)}
+.verdict .mark{font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.hit .mark{color:var(--green)} .miss .mark{color:var(--red)}
+.verdict .pv,.verdict .av{font-size:14px} .verdict .pv b{color:var(--goldD)}
+.filters{margin:10px 0 4px}
+.filters button{font-weight:700;font-size:11.5px;background:var(--card);border:1px solid var(--line);color:var(--mut);padding:7px 13px;border-radius:999px;margin:0 6px 6px 0;cursor:pointer}
+.filters button.on{border-color:var(--green);color:#fff;background:var(--green)}
+.sub-box{background:var(--green2);color:#E9EFEA;border-radius:16px;padding:26px;margin:40px 0;box-shadow:var(--shadow)}
+.sub-box h2{margin-top:0;color:#fff} .sub-box .note{color:#C9D6CE}
+.sub-box input[type=email]{font:15px Inter,sans-serif;padding:11px 13px;border:0;border-radius:8px;width:min(320px,100%)}
+.sub-box button{font:700 13.5px Inter,sans-serif;padding:12px 20px;border:0;border-radius:8px;background:var(--gold);color:var(--green2);cursor:pointer;margin-left:8px}
+.sub-box a{color:var(--gold)}
+footer{margin-top:50px;padding:24px 0 44px;color:var(--mut);font-size:12.5px;border-top:1px solid var(--line)}
+img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10px 0;box-shadow:var(--shadow)}
+.schematic{width:100%;height:auto;margin:14px 0}
+.eras{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.era{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.era .yr{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:26px;color:var(--green)}
+.era .host{font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-top:2px}
+.era .stat{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:19px;margin-top:10px;color:var(--goldD)}
+.era .stat small{display:block;font:400 12.5px Inter,sans-serif;color:var(--mut);margin-top:3px}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:18px 0}
+.person{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 20px;text-align:center;box-shadow:var(--shadow)}
+.person .ph{width:110px;height:110px;border-radius:50%;margin:0 auto 12px;object-fit:cover;border:3px solid var(--gold);display:block}
+.person .init{width:110px;height:110px;border-radius:50%;margin:0 auto 12px;border:3px solid var(--gold);display:none;align-items:center;justify-content:center;font-family:Archivo,sans-serif;font-weight:800;font-size:32px;color:var(--green)}
+.person .nm{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:17px}
+.person .rl{color:var(--mut);font-size:13px;margin:6px 0 10px}
+.person .tour{font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--goldD)}
+@media(max-width:640px){.duel{flex-direction:column;align-items:flex-start}.bignum{text-align:left}}
+</style></head><body>
+<header><div class="wrap"><div class="kick">UB Analytics · about</div><h1>About <span class="y">us</span>.</h1>
+<p class="sub">Two friends, three World Cups, one standing argument with the bookmakers.</p>
+<nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
+</div></header><main class="wrap">
+<h2>The story</h2>
+<p class="note">UB Analytics began in 2014 as a hobby project between two friends who grew up playing and arguing about football in India, where the game is played everywhere and represented nowhere on the world stage. The question that started it: could rigorous statistical analysis, applied to openly available data, read a World Cup better than punditry? The 2014 knockout record said yes, and the project has returned for every World Cup since, each time rebuilt with the methods of its moment. Since 2026 it also serves a second purpose: a live teaching laboratory for business statistics and analytics students at the Carlson School of Management.</p>
+<h2>The team</h2>
+<div class="people">
+<div class="person">
+<img class="ph" src="img_bhupinder.jpg" alt="Bhupinder Juneja" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+<div class="init">BJ</div>
+<div class="nm">Bhupinder Juneja</div><div class="rl">Lecturer, Carlson School of Management, University of Minnesota. Teaches Business Statistics (BA 2551) and Data Analysis for Managers (MBA 6121). 2026 Carlson Instructor of the Year.</div>
+<div class="tour">2014 · 2018 · 2026</div><div><a href="LINKEDIN_URL_BHUPINDER">LinkedIn</a></div></div>
+<div class="person">
+<img class="ph" src="img_ujjal.jpg" alt="Ujjal Mukherjee" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+<div class="init">UM</div>
+<div class="nm">Ujjal Mukherjee</div><div class="rl">Professor, Gies College of Business, University of Illinois Urbana-Champaign.</div>
+<div class="tour">2014 · 2018 · 2026</div><div><a href="LINKEDIN_URL_UJJAL">Faculty page</a></div></div>
+<div class="person">
+<img class="ph" src="img_aniruddha.jpg" alt="Aniruddha Mukherjee" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+<div class="init">AM</div>
+<div class="nm">Aniruddha Mukherjee</div><div class="rl">Computer science, University of Illinois Urbana-Champaign (at the time of the 2018 campaign).</div>
+<div class="tour">2018</div><div><a href="https://aniruddhamukherjeesite.wordpress.com/fifa-2018-world-cup/">FIFA 2018 work</a></div></div>
+</div>
+<h2>Campaign rosters</h2>
+<div style="overflow-x:auto"><table>
+<tr><th>World Cup</th><th>Team</th><th>Stack of its era</th></tr>
+<tr><td>2014 · Brazil</td><td>Ujjal Mukherjee, Bhupinder Juneja</td><td>R, Soccerwiki scraping, SPI, GLM + random forest + SVM ensemble</td></tr>
+<tr><td>2018 · Russia</td><td>Ujjal Mukherjee, Aniruddha Mukherjee, Bhupinder Juneja</td><td>R, player-level data, binary win-probability ensemble</td></tr>
+<tr><td>2026 · North America</td><td>Bhupinder Juneja, Ujjal Mukherjee</td><td>Python + R, self-computed Elo, Poisson scorelines, Brier-weighted ensemble, public scorecard</td></tr>
+</table></div>
+<p class="note">Questions, corrections, or a model you think beats ours? The 2014 and 2018 archives are open at <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a>, and the 2026 methodology is fully documented <a href="methods.html">under the hood</a>.</p></main>
+<footer><div class="wrap">UB Analytics · Bhupinder Juneja UB Analytics · Bhupinder &amp; Ujjal Mukherjee ·amp; Ujjal Mukherjee · an educational exercise for BA 2551 and MBA 6121 at the Carlson School of Management, not betting advice. Data: martj42/international_results (CC0). 2014 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a>.</div></footer>
+</body></html>
