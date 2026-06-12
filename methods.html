@@ -36,6 +36,15 @@ h2{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:20px;margin:36
 .bignum{text-align:right;line-height:1}
 .bignum b{font-family:Archivo,Inter,sans-serif;font-size:clamp(26px,4.4vw,36px);font-weight:800;color:var(--goldD)}
 .bignum span{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-top:4px}
+.pa{display:flex;justify-content:center;gap:44px;align-items:center;margin:20px 0 10px;text-align:center}
+.pa .lbl{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.pa .val{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:24px;margin-top:4px}
+.pa .det{font-size:14px;color:var(--mut);margin-top:3px}
+.pa .arrow{font-size:26px;color:var(--sage)}
+.pa .pend{color:var(--sage);font-weight:600;font-size:17px;margin-top:8px}
+.badge{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.1em;padding:5px 14px;border-radius:999px;margin-top:7px}
+@media(max-width:560px){.pa{gap:22px}.pa .val{font-size:19px}}
+.badge.hit{background:#EAF3ED;color:var(--green)} .badge.miss{background:#FBEAE4;color:var(--red)}
 .pickline{font-size:15px;margin:10px 0 2px}
 .pickline b{color:var(--green)}
 .actline{font-size:14.5px;margin:4px 0 0;font-weight:600}
@@ -144,6 +153,8 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 <p class="note">Unlike 2014, where we fit and predicted within the same tournament, every number below is strictly out of sample: trained through 2023, scored on all 2,535 internationals from January 2024 to June 2026. The ensemble weights components by inverse holdout Brier score (<a href="https://doi.org/10.1175/1520-0493(1950)078%3C0001:VOFEIT%3E2.0.CO;2">Brier 1950, Monthly Weather Review 78(1)</a>): logistic 0.34, random forest 0.33, Poisson 0.33.</p>
 <table><tr><th>Model</th><th class="num">Accuracy</th><th class="num">Brier ↓</th><th class="num">Log loss ↓</th></tr><tr><td>Logistic</td><td class="num">59.8%</td><td class="num">0.5105</td><td class="num">0.8668</td></tr><tr><td>Random Forest</td><td class="num">59.8%</td><td class="num">0.5128</td><td class="num">0.8726</td></tr><tr><td>Poisson</td><td class="num">59.6%</td><td class="num">0.5128</td><td class="num">0.8721</td></tr><tr><td>Ensemble</td><td class="num">59.8%</td><td class="num">0.5107</td><td class="num">0.8681</td></tr></table>
 <p class="note">Reference points: predicting base rates every time scores Brier 0.636; a uniform coin-flip model scores 0.667. Draws are the hard class; roughly a quarter of internationals end level and no public model predicts them well.</p>
+<h2>Mid-tournament policy, stated in advance</h2>
+<p class="note">Published predictions are never revised or refit on early results: with holdout accuracy near 60 %, a 3-of-6 start has roughly a 46 % probability under a perfectly healthy model, so reacting to it would be fitting noise. What updates continuously is the <i>data</i>: every result feeds Elo and the form windows, and the knockout-round predictions will apply this same frozen model to strengths that have absorbed all 72 group results. If the model is ever genuinely beaten (pre-registered tripwire: running Brier worse than the 0.628 a base-rate forecaster scores, after 24+ matches), any successor ships as a clearly labeled v2 predicting alongside v1 on the same public scorecard, never replacing it. Headline skill metric: the Brier Skill Score versus the naive base-rate forecaster; the ordered-outcome alternative is the Ranked Probability Score (<a href="https://doi.org/10.1515/1559-0410.1418">Constantinou &amp; Fenton 2012, J. Quant. Analysis in Sports 8(1)</a>).</p>
 <h2>5 · Current strength estimates</h2>
 <img class="fig" src="img_elo.png" alt="Elo top 20">
 <h2>6 · Lineage and classroom use</h2>
