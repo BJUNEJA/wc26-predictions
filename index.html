@@ -96,60 +96,108 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 <header><div class="wrap"><div class="kick">UB Analytics · est. 2014 · back for the 48-team era</div><h1>World Cup <span class="y">2026</span>, one matchday at a time.</h1>
 <p class="sub">One matchday at a time, the reasoning one click deep, every verdict on the record. <a href='legacy.html' style='color:var(--gold)'>Our third World Cup since 2014.</a></p>
 <nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
-</div></header><main class="wrap"><div class="chips"><span class="chip"><b>2/3</b>picks correct</span><span class="chip"><b>0.579</b>running Brier</span><span class="chip"><b>-1%</b><abbr title="Brier Skill Score: improvement over a naive forecaster that always predicts historical base rates (49/23/28). Positive = the model adds real information.">skill vs naive</abbr></span><span class="chip"><b>13/16</b>2014 knockouts</span></div>
-<h2>Matchday: 2026-06-12</h2>
-<p class="note">Predictions lock before kickoff. Last build: 2026-06-12 21:53 UTC.</p>
-<div class="card"><div class="meta"><span class="tag g">Group B</span><span class="tag">2026-06-12</span><span class="tag">Toronto, Canada</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/ca.png" srcset="https://flagcdn.com/w56/ca.png 2x" width="28" alt="" loading="lazy">Canada<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/ba.png" srcset="https://flagcdn.com/w56/ba.png 2x" width="28" alt="" loading="lazy">Bosnia and Herzegovina</div><div class="bignum"><b>75%</b><span>Canada by 2</span></div></div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Canada by 2</div><div class="det">confidence 75%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="val">Draw</div><div class="det">1–1</div><span class="badge miss">MISSED · Brier 1.26</span></div></div><div class="bar"><i style="width:74.9%;background:var(--gold)"></i><i style="width:16.6%;background:var(--sage)"></i><i style="width:8.5%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/ca.png" srcset="https://flagcdn.com/w48/ca.png 2x" width="24" alt="" loading="lazy"> <b>Canada</b> 75% · draw 17% · <img class="flag" src="https://flagcdn.com/w24/ba.png" srcset="https://flagcdn.com/w48/ba.png 2x" width="24" alt="" loading="lazy"> <b>Bosnia and Herzegovina</b> 8%</div><details><summary>How the model got here</summary><table>
+</div></header><main class="wrap"><div class="chips"><span class="chip"><b>2/4</b>picks correct</span><span class="chip"><b>0.616</b>running Brier</span><span class="chip"><b>-16%</b><abbr title="Brier Skill Score: improvement over a naive forecaster that always predicts historical base rates (49/23/28). Positive = the model adds real information.">skill vs naive</abbr></span><span class="chip"><b>13/16</b>2014 knockouts</span></div>
+<h2>Matchday: 2026-06-13</h2>
+<p class="note">Predictions lock before kickoff. Last build: 2026-06-13 03:17 UTC.</p>
+<div class="card"><div class="meta"><span class="tag g">Group D</span><span class="tag">2026-06-13</span><span class="tag">Vancouver, Canada</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/au.png" srcset="https://flagcdn.com/w56/au.png 2x" width="28" alt="" loading="lazy">Australia<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/tr.png" srcset="https://flagcdn.com/w56/tr.png 2x" width="28" alt="" loading="lazy">Turkey</div><div class="bignum"><b>39%</b><span>Turkey by 1</span></div></div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Turkey by 1</div><div class="det">confidence 39%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="bar"><i style="width:31.9%;background:var(--gold)"></i><i style="width:29.0%;background:var(--sage)"></i><i style="width:39.2%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/au.png" srcset="https://flagcdn.com/w48/au.png 2x" width="24" alt="" loading="lazy"> <b>Australia</b> 32% · draw 29% · <img class="flag" src="https://flagcdn.com/w24/tr.png" srcset="https://flagcdn.com/w48/tr.png 2x" width="24" alt="" loading="lazy"> <b>Turkey</b> 39%</div><details><summary>How the model got here</summary><table>
 <tr><th></th>
 <th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
 <th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
 <th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
 <th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
 <th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
-<tr><td><b>Canada</b></td><td class="num">1913&nbsp;(+100 host)</td>
-<td class="num">1.48</td><td class="num">0.68</td><td class="num">+0.70</td>
-<td rowspan="2">Toronto</td></tr>
-<tr><td><b>Bosnia and Herzegovina</b></td><td class="num">1680</td>
-<td class="num">1.28</td><td class="num">1.68</td><td class="num">+1.00</td></tr>
+<tr><td><b>Australia</b></td><td class="num">1927</td>
+<td class="num">1.76</td><td class="num">0.76</td><td class="num">+0.30</td>
+<td rowspan="2">Vancouver (neutral)</td></tr>
+<tr><td><b>Turkey</b></td><td class="num">2012</td>
+<td class="num">2.00</td><td class="num">1.20</td><td class="num">+1.20</td></tr>
 </table>
 <p class="note" style="margin:8px 0 4px">Step 1, features: the model sees only differences:
-EloDiff +334, AttDiff +0.20, DefDiff +1.00, FormDiff -0.30, HomeFlag 1.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Canada / draw / Bosnia and Herzegovina):</p>
+EloDiff -84, AttDiff -0.24, DefDiff +0.44, FormDiff -0.90, HomeFlag 0.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Australia / draw / Turkey):</p>
 <table>
-<tr><th>Model</th><th class="num">Canada</th><th class="num">Draw</th><th class="num">Bosnia and Herzegovina</th><th class="num">Weight</th></tr>
-<tr><td>Logistic regression</td><td class="num">74%</td><td class="num">19%</td><td class="num">8%</td><td class="num">0.34</td></tr>
-<tr><td>Random forest</td><td class="num">78%</td><td class="num">13%</td><td class="num">9%</td><td class="num">0.33</td></tr>
-<tr><td>Poisson scoreline</td><td class="num">73%</td><td class="num">18%</td><td class="num">9%</td><td class="num">0.33</td></tr>
-<tr><td><b>Weighted ensemble</b></td><td class="num"><b>75%</b></td><td class="num"><b>17%</b></td><td class="num"><b>8%</b></td><td class="num">1.00</td></tr>
+<tr><th>Model</th><th class="num">Australia</th><th class="num">Draw</th><th class="num">Turkey</th><th class="num">Weight</th></tr>
+<tr><td>Logistic regression</td><td class="num">29%</td><td class="num">29%</td><td class="num">43%</td><td class="num">0.34</td></tr>
+<tr><td>Random forest</td><td class="num">34%</td><td class="num">31%</td><td class="num">34%</td><td class="num">0.33</td></tr>
+<tr><td>Poisson scoreline</td><td class="num">32%</td><td class="num">27%</td><td class="num">40%</td><td class="num">0.33</td></tr>
+<tr><td><b>Weighted ensemble</b></td><td class="num"><b>32%</b></td><td class="num"><b>29%</b></td><td class="num"><b>39%</b></td><td class="num">1.00</td></tr>
 </table>
-<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 2.1 vs 0.6 goals,
-so the predicted margin is 2.1 − 0.6 ≈ 2.
-Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div><div class="card"><div class="meta"><span class="tag g">Group D</span><span class="tag">2026-06-12</span><span class="tag">Inglewood, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/us.png" srcset="https://flagcdn.com/w56/us.png 2x" width="28" alt="" loading="lazy">United States<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/py.png" srcset="https://flagcdn.com/w56/py.png 2x" width="28" alt="" loading="lazy">Paraguay</div><div class="bignum"><b>40%</b><span>Paraguay by 1</span></div></div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Paraguay by 1</div><div class="det">confidence 40%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="bar"><i style="width:30.7%;background:var(--gold)"></i><i style="width:29.0%;background:var(--sage)"></i><i style="width:40.3%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/us.png" srcset="https://flagcdn.com/w48/us.png 2x" width="24" alt="" loading="lazy"> <b>United States</b> 31% · draw 29% · <img class="flag" src="https://flagcdn.com/w24/py.png" srcset="https://flagcdn.com/w48/py.png 2x" width="24" alt="" loading="lazy"> <b>Paraguay</b> 40%</div><details><summary>How the model got here</summary><table>
+<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 1.1 vs 1.3 goals,
+so the predicted margin is 1.1 − 1.3 ≈ level.
+Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div><div class="card"><div class="meta"><span class="tag g">Group C</span><span class="tag">2026-06-13</span><span class="tag">East Rutherford, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/br.png" srcset="https://flagcdn.com/w56/br.png 2x" width="28" alt="" loading="lazy">Brazil<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/ma.png" srcset="https://flagcdn.com/w56/ma.png 2x" width="28" alt="" loading="lazy">Morocco</div><div class="bignum"><b>42%</b><span>Brazil by 1</span></div></div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Brazil by 1</div><div class="det">confidence 42%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="bar"><i style="width:41.9%;background:var(--gold)"></i><i style="width:29.0%;background:var(--sage)"></i><i style="width:29.1%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/br.png" srcset="https://flagcdn.com/w48/br.png 2x" width="24" alt="" loading="lazy"> <b>Brazil</b> 42% · draw 29% · <img class="flag" src="https://flagcdn.com/w24/ma.png" srcset="https://flagcdn.com/w48/ma.png 2x" width="24" alt="" loading="lazy"> <b>Morocco</b> 29%</div><details><summary>How the model got here</summary><table>
 <tr><th></th>
 <th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
 <th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
 <th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
 <th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
 <th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
-<tr><td><b>United States</b></td><td class="num">1842&nbsp;(+100 host)</td>
-<td class="num">1.76</td><td class="num">1.48</td><td class="num">+0.10</td>
-<td rowspan="2">Inglewood</td></tr>
-<tr><td><b>Paraguay</b></td><td class="num">1974</td>
-<td class="num">1.12</td><td class="num">1.08</td><td class="num">+0.20</td></tr>
+<tr><td><b>Brazil</b></td><td class="num">2069</td>
+<td class="num">1.76</td><td class="num">0.92</td><td class="num">+1.40</td>
+<td rowspan="2">East Rutherford (neutral)</td></tr>
+<tr><td><b>Morocco</b></td><td class="num">2009</td>
+<td class="num">2.04</td><td class="num">0.28</td><td class="num">+1.90</td></tr>
 </table>
 <p class="note" style="margin:8px 0 4px">Step 1, features: the model sees only differences:
-EloDiff -32, AttDiff +0.64, DefDiff -0.40, FormDiff -0.10, HomeFlag 1.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (United States / draw / Paraguay):</p>
+EloDiff +60, AttDiff -0.28, DefDiff -0.64, FormDiff -0.50, HomeFlag 0.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Brazil / draw / Morocco):</p>
 <table>
-<tr><th>Model</th><th class="num">United States</th><th class="num">Draw</th><th class="num">Paraguay</th><th class="num">Weight</th></tr>
-<tr><td>Logistic regression</td><td class="num">30%</td><td class="num">29%</td><td class="num">41%</td><td class="num">0.34</td></tr>
-<tr><td>Random forest</td><td class="num">31%</td><td class="num">30%</td><td class="num">39%</td><td class="num">0.33</td></tr>
-<tr><td>Poisson scoreline</td><td class="num">30%</td><td class="num">28%</td><td class="num">42%</td><td class="num">0.33</td></tr>
-<tr><td><b>Weighted ensemble</b></td><td class="num"><b>31%</b></td><td class="num"><b>29%</b></td><td class="num"><b>40%</b></td><td class="num">1.00</td></tr>
+<tr><th>Model</th><th class="num">Brazil</th><th class="num">Draw</th><th class="num">Morocco</th><th class="num">Weight</th></tr>
+<tr><td>Logistic regression</td><td class="num">43%</td><td class="num">29%</td><td class="num">28%</td><td class="num">0.34</td></tr>
+<tr><td>Random forest</td><td class="num">43%</td><td class="num">31%</td><td class="num">26%</td><td class="num">0.33</td></tr>
+<tr><td>Poisson scoreline</td><td class="num">40%</td><td class="num">27%</td><td class="num">33%</td><td class="num">0.33</td></tr>
+<tr><td><b>Weighted ensemble</b></td><td class="num"><b>42%</b></td><td class="num"><b>29%</b></td><td class="num"><b>29%</b></td><td class="num">1.00</td></tr>
 </table>
-<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 1.0 vs 1.3 goals,
-so the predicted margin is 1.0 − 1.3 ≈ level.
+<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 1.3 vs 1.2 goals,
+so the predicted margin is 1.3 − 1.2 ≈ level.
+Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div><div class="card"><div class="meta"><span class="tag g">Group C</span><span class="tag">2026-06-13</span><span class="tag">Foxborough, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/ht.png" srcset="https://flagcdn.com/w56/ht.png 2x" width="28" alt="" loading="lazy">Haiti<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/gb-sct.png" srcset="https://flagcdn.com/w56/gb-sct.png 2x" width="28" alt="" loading="lazy">Scotland</div><div class="bignum"><b>51%</b><span>Scotland by 1</span></div></div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Scotland by 1</div><div class="det">confidence 51%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="bar"><i style="width:20.6%;background:var(--gold)"></i><i style="width:28.2%;background:var(--sage)"></i><i style="width:51.2%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/ht.png" srcset="https://flagcdn.com/w48/ht.png 2x" width="24" alt="" loading="lazy"> <b>Haiti</b> 21% · draw 28% · <img class="flag" src="https://flagcdn.com/w24/gb-sct.png" srcset="https://flagcdn.com/w48/gb-sct.png 2x" width="24" alt="" loading="lazy"> <b>Scotland</b> 51%</div><details><summary>How the model got here</summary><table>
+<tr><th></th>
+<th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
+<th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
+<th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
+<th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
+<th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
+<tr><td><b>Haiti</b></td><td class="num">1729</td>
+<td class="num">2.48</td><td class="num">1.16</td><td class="num">+0.50</td>
+<td rowspan="2">Foxborough (neutral)</td></tr>
+<tr><td><b>Scotland</b></td><td class="num">1885</td>
+<td class="num">1.60</td><td class="num">1.32</td><td class="num">+1.10</td></tr>
+</table>
+<p class="note" style="margin:8px 0 4px">Step 1, features: the model sees only differences:
+EloDiff -155, AttDiff +0.88, DefDiff +0.16, FormDiff -0.60, HomeFlag 0.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Haiti / draw / Scotland):</p>
+<table>
+<tr><th>Model</th><th class="num">Haiti</th><th class="num">Draw</th><th class="num">Scotland</th><th class="num">Weight</th></tr>
+<tr><td>Logistic regression</td><td class="num">19%</td><td class="num">26%</td><td class="num">55%</td><td class="num">0.34</td></tr>
+<tr><td>Random forest</td><td class="num">22%</td><td class="num">33%</td><td class="num">45%</td><td class="num">0.33</td></tr>
+<tr><td>Poisson scoreline</td><td class="num">21%</td><td class="num">25%</td><td class="num">54%</td><td class="num">0.33</td></tr>
+<tr><td><b>Weighted ensemble</b></td><td class="num"><b>21%</b></td><td class="num"><b>28%</b></td><td class="num"><b>51%</b></td><td class="num">1.00</td></tr>
+</table>
+<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 0.9 vs 1.6 goals,
+so the predicted margin is 0.9 − 1.6 ≈ 1.
+Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div><div class="card"><div class="meta"><span class="tag g">Group B</span><span class="tag">2026-06-13</span><span class="tag">Santa Clara, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/qa.png" srcset="https://flagcdn.com/w56/qa.png 2x" width="28" alt="" loading="lazy">Qatar<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/ch.png" srcset="https://flagcdn.com/w56/ch.png 2x" width="28" alt="" loading="lazy">Switzerland</div><div class="bignum"><b>79%</b><span>Switzerland by 2</span></div></div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Switzerland by 2</div><div class="det">confidence 79%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="bar"><i style="width:6.0%;background:var(--gold)"></i><i style="width:14.6%;background:var(--sage)"></i><i style="width:79.4%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/qa.png" srcset="https://flagcdn.com/w48/qa.png 2x" width="24" alt="" loading="lazy"> <b>Qatar</b> 6% · draw 15% · <img class="flag" src="https://flagcdn.com/w24/ch.png" srcset="https://flagcdn.com/w48/ch.png 2x" width="24" alt="" loading="lazy"> <b>Switzerland</b> 79%</div><details><summary>How the model got here</summary><table>
+<tr><th></th>
+<th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
+<th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
+<th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
+<th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
+<th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
+<tr><td><b>Qatar</b></td><td class="num">1572</td>
+<td class="num">1.24</td><td class="num">1.84</td><td class="num">-0.80</td>
+<td rowspan="2">Santa Clara (neutral)</td></tr>
+<tr><td><b>Switzerland</b></td><td class="num">1977</td>
+<td class="num">1.92</td><td class="num">1.20</td><td class="num">+1.40</td></tr>
+</table>
+<p class="note" style="margin:8px 0 4px">Step 1, features: the model sees only differences:
+EloDiff -406, AttDiff -0.68, DefDiff -0.64, FormDiff -2.20, HomeFlag 0.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Qatar / draw / Switzerland):</p>
+<table>
+<tr><th>Model</th><th class="num">Qatar</th><th class="num">Draw</th><th class="num">Switzerland</th><th class="num">Weight</th></tr>
+<tr><td>Logistic regression</td><td class="num">6%</td><td class="num">17%</td><td class="num">77%</td><td class="num">0.34</td></tr>
+<tr><td>Random forest</td><td class="num">5%</td><td class="num">12%</td><td class="num">83%</td><td class="num">0.33</td></tr>
+<tr><td>Poisson scoreline</td><td class="num">7%</td><td class="num">14%</td><td class="num">78%</td><td class="num">0.33</td></tr>
+<tr><td><b>Weighted ensemble</b></td><td class="num"><b>6%</b></td><td class="num"><b>15%</b></td><td class="num"><b>79%</b></td><td class="num">1.00</td></tr>
+</table>
+<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 0.6 vs 2.5 goals,
+so the predicted margin is 0.6 − 2.5 ≈ 2.
 Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div>
 <h2>Latest verdicts</h2>
-<div class="verdict miss"><div class="mark">✘ missed · 2026-06-12 · Group B</div><div class="pv">Predicted outcome: <b>Canada wins</b> with goal difference of 2. Confidence score 0.75 (max 1).</div><div class="av">Actual outcome: Match drawn (1–1). Brier 1.26.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-11 · Group A</div><div class="pv">Predicted outcome: <b>Mexico wins</b> with goal difference of 2. Confidence score 0.81 (max 1).</div><div class="av">Actual outcome: Mexico won by goal difference of 2 (2–0). Brier 0.06.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-11 · Group A</div><div class="pv">Predicted outcome: <b>South Korea wins</b> with goal difference of 1. Confidence score 0.48 (max 1).</div><div class="av">Actual outcome: South Korea won by goal difference of 1 (2–1). Brier 0.41.</div></div>
+<div class="verdict miss"><div class="mark">✘ missed · 2026-06-12 · Group B</div><div class="pv">Predicted outcome: <b>Canada wins</b> with goal difference of 2. Confidence score 0.75 (max 1).</div><div class="av">Actual outcome: Match drawn (1–1). Brier 1.26.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-12 · Group D</div><div class="pv">Predicted outcome: <b>Paraguay wins</b> with goal difference of 1. Confidence score 0.40 (max 1).</div><div class="av">Actual outcome: United States won by goal difference of 3 (4–1). Brier 0.73.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-11 · Group A</div><div class="pv">Predicted outcome: <b>Mexico wins</b> with goal difference of 2. Confidence score 0.81 (max 1).</div><div class="av">Actual outcome: Mexico won by goal difference of 2 (2–0). Brier 0.06.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-11 · Group A</div><div class="pv">Predicted outcome: <b>South Korea wins</b> with goal difference of 1. Confidence score 0.48 (max 1).</div><div class="av">Actual outcome: South Korea won by goal difference of 1 (2–1). Brier 0.41.</div></div>
 <p class="note"><a href="schedule.html">Full 72-match outlook and complete scorecard →</a></p>
 <div class="sub-box" id="subscribe"><h2>Every matchday's predictions by email</h2>
 <p class="note">One email per matchday. Unsubscribe anytime.</p>
