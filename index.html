@@ -45,6 +45,19 @@ h2{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:20px;margin:36
 .badge{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.1em;padding:5px 14px;border-radius:999px;margin-top:7px}
 @media(max-width:560px){.pa{gap:22px}.pa .val{font-size:19px}}
 .badge.hit{background:#EAF3ED;color:var(--green)} .badge.miss{background:#FBEAE4;color:var(--red)}
+.humans{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.hpick{flex:1;min-width:140px;padding:9px 12px;background:var(--bg);border-radius:10px;font-size:12.5px;color:var(--mut)}
+.hpick b{color:var(--ink)} .hpick .htag{font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:3px}
+.hpick .hres{font-weight:700;font-size:11.5px;margin-top:4px}
+.hpick .hres.hit{color:var(--green)} .hpick .hres.miss{color:var(--red)}
+.crowd{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.csig{flex:1;min-width:140px;padding:9px 12px;border-radius:10px;font-size:12.5px;color:var(--mut)}
+.csig.reddit{background:#FFF4E8;border:1px solid #F5DFC0} .csig.market{background:#EBF0FF;border:1px solid #C8D5F0}
+.csig b{color:var(--ink)} .csig .ctag{font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:3px}
+.csig.reddit .ctag{color:#C07000} .csig.market .ctag{color:#3050A0}
+.csig .cprobs{font-size:11px;margin-top:2px}
+.csig .cres{font-weight:700;font-size:11.5px;margin-top:4px}
+.csig .cres.hit{color:var(--green)} .csig .cres.miss{color:var(--red)}
 .pickline{font-size:15px;margin:10px 0 2px}
 .pickline b{color:var(--green)}
 .actline{font-size:14.5px;margin:4px 0 0;font-weight:600}
@@ -95,10 +108,10 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 </style></head><body>
 <header><div class="wrap"><div class="kick">UB Analytics · est. 2014 · back for the 48-team era</div><h1>World Cup <span class="y">2026</span>, one matchday at a time.</h1>
 <p class="sub">One matchday at a time, the reasoning one click deep, every verdict on the record. <a href='legacy.html' style='color:var(--gold)'>Our third World Cup since 2014.</a></p>
-<nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
+<nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="leaderboard.html">Leaderboard</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
 </div></header><main class="wrap"><div class="chips"><span class="chip"><b>3/8</b>picks correct</span><span class="chip"><b>0.707</b>running Brier</span><span class="chip"><b>-10%</b><abbr title="Brier Skill Score: improvement over a naive forecaster that always predicts historical base rates (49/23/28). Positive = the model adds real information.">skill vs naive</abbr></span><span class="chip"><b>13/16</b>2014 knockouts</span></div>
 <h2>Matchday: 2026-06-14</h2>
-<p class="note">Predictions lock before kickoff. Last build: 2026-06-14 15:53 UTC.</p>
+<p class="note">Predictions lock before kickoff. Last build: 2026-06-14 17:03 UTC.</p>
 <div class="card"><div class="meta"><span class="tag g">Group E</span><span class="tag">2026-06-14</span><span class="tag">Houston, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/de.png" srcset="https://flagcdn.com/w56/de.png 2x" width="28" alt="" loading="lazy">Germany<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/cw.png" srcset="https://flagcdn.com/w56/cw.png 2x" width="28" alt="" loading="lazy">Curaçao</div><div class="bignum"><b>76%</b><span>Germany by 2</span></div></div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Germany by 2</div><div class="det">confidence 76%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="bar"><i style="width:75.8%;background:var(--gold)"></i><i style="width:17.1%;background:var(--sage)"></i><i style="width:7.1%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/de.png" srcset="https://flagcdn.com/w48/de.png 2x" width="24" alt="" loading="lazy"> <b>Germany</b> 76% · draw 17% · <img class="flag" src="https://flagcdn.com/w24/cw.png" srcset="https://flagcdn.com/w48/cw.png 2x" width="24" alt="" loading="lazy"> <b>Curaçao</b> 7%</div><details><summary>How the model got here</summary><table>
 <tr><th></th>
 <th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
@@ -205,5 +218,5 @@ Weights come from each model's Brier score on 2,535 held-out internationals (202
 <input type="email" name="email" placeholder="you@example.com" required>
 <button type="submit">Subscribe</button></form>
 <p class="note" style="margin-top:10px">Prefer a feed? <a href="feed.xml">RSS</a> updates with every build.</p></div></main>
-<footer><div class="wrap">UB Analytics is an independent project, not affiliated with or endorsed by FIFA. Not betting advice. · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
+<footer><div class="wrap">UB Analytics is an independent, non-commercial educational project, not affiliated with or endorsed by FIFA or any institution. Not betting advice. · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
 </body></html>

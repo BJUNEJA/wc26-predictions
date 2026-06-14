@@ -45,6 +45,19 @@ h2{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:20px;margin:36
 .badge{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.1em;padding:5px 14px;border-radius:999px;margin-top:7px}
 @media(max-width:560px){.pa{gap:22px}.pa .val{font-size:19px}}
 .badge.hit{background:#EAF3ED;color:var(--green)} .badge.miss{background:#FBEAE4;color:var(--red)}
+.humans{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.hpick{flex:1;min-width:140px;padding:9px 12px;background:var(--bg);border-radius:10px;font-size:12.5px;color:var(--mut)}
+.hpick b{color:var(--ink)} .hpick .htag{font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:3px}
+.hpick .hres{font-weight:700;font-size:11.5px;margin-top:4px}
+.hpick .hres.hit{color:var(--green)} .hpick .hres.miss{color:var(--red)}
+.crowd{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.csig{flex:1;min-width:140px;padding:9px 12px;border-radius:10px;font-size:12.5px;color:var(--mut)}
+.csig.reddit{background:#FFF4E8;border:1px solid #F5DFC0} .csig.market{background:#EBF0FF;border:1px solid #C8D5F0}
+.csig b{color:var(--ink)} .csig .ctag{font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:3px}
+.csig.reddit .ctag{color:#C07000} .csig.market .ctag{color:#3050A0}
+.csig .cprobs{font-size:11px;margin-top:2px}
+.csig .cres{font-weight:700;font-size:11.5px;margin-top:4px}
+.csig .cres.hit{color:var(--green)} .csig .cres.miss{color:var(--red)}
 .pickline{font-size:15px;margin:10px 0 2px}
 .pickline b{color:var(--green)}
 .actline{font-size:14.5px;margin:4px 0 0;font-weight:600}
@@ -95,7 +108,7 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 </style></head><body>
 <header><div class="wrap"><div class="kick">UB Analytics · methodology</div><h1>Under the <span class="y">hood</span>.</h1>
 <p class="sub">The schematic for orientation, then the complete mathematics. Nothing in the prediction is hidden.</p>
-<nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
+<nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="leaderboard.html">Leaderboard</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
 </div></header><main class="wrap">
 <h2>The pipeline at a glance</h2>
 <p class="note">The whole machine in one picture; click any box to jump to its detail.</p>
@@ -155,9 +168,11 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 <p class="note">Reference points: predicting base rates every time scores Brier 0.636; a uniform coin-flip model scores 0.667. Draws are the hard class; roughly a quarter of internationals end level and no public model predicts them well.</p>
 <h2>Mid-tournament policy, stated in advance</h2>
 <p class="note">Published predictions are never revised or refit on early results: with holdout accuracy near 60 %, a 3-of-6 start has roughly a 46 % probability under a perfectly healthy model, so reacting to it would be fitting noise. What updates continuously is the <i>data</i>: every result feeds Elo and the form windows, and the knockout-round predictions will apply this same frozen model to strengths that have absorbed all 72 group results. If the model is ever genuinely beaten (pre-registered tripwire: running Brier worse than the 0.628 a base-rate forecaster scores, after 24+ matches), any successor ships as a clearly labeled v2 predicting alongside v1 on the same public scorecard, never replacing it. Headline skill metric: the Brier Skill Score versus the naive base-rate forecaster; the ordered-outcome alternative is the Ranked Probability Score (<a href="https://doi.org/10.1515/1559-0410.1418">Constantinou &amp; Fenton 2012, J. Quant. Analysis in Sports 8(1)</a>).</p>
+<h2 id="tournament">The forecasting tournament</h2>
+<p class="note">The <a href="leaderboard.html">leaderboard</a> scores every registered model, crowd signal, and human forecaster on the same Brier scale, on the same matches, with predictions frozen before kickoff. Entry rules: (1) register before your first prediction is scored; no retroactive submission, (2) submit a full probability vector (W/D/L summing to 1) per match, not just a pick, because Brier rewards calibrated confidence, (3) pre-register all remaining predictions at the point of entry. The champion (this site's Elo ensemble) is scored on all 72 group matches; challengers entering mid-tournament are scored from their entry date forward, and the leaderboard displays matches scored per model so the comparison is transparent. Scoring methodology: multiclass Brier (Brier 1950); skill score vs the naive base-rate forecaster; accuracy as a secondary metric. At current sample sizes (<a href="#mid-tournament">see the statistical power note</a>), models within ~0.05 Brier of each other are indistinguishable. The leaderboard is entertainment until N is large enough for the confidence intervals to separate.</p>
 <h2>5 · Current strength estimates</h2>
 <img class="fig" src="img_elo.png" alt="Elo top 20">
 <h2>6 · Lineage and classroom use</h2>
 <p class="note">The 2014 system scraped Soccerwiki for player-derived ratings, added FiveThirtyEight's SPI, imputed shot differentials with random forests, and ensembled GLM, random forest, and SVM; it called Germany over Argentina in the final. 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a>.</p></main>
-<footer><div class="wrap">UB Analytics is an independent project, not affiliated with or endorsed by FIFA. Not betting advice. · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
+<footer><div class="wrap">UB Analytics is an independent, non-commercial educational project, not affiliated with or endorsed by FIFA or any institution. Not betting advice. · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
 </body></html>

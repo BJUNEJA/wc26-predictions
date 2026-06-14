@@ -45,6 +45,19 @@ h2{font-family:Archivo,Inter,sans-serif;font-weight:800;font-size:20px;margin:36
 .badge{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.1em;padding:5px 14px;border-radius:999px;margin-top:7px}
 @media(max-width:560px){.pa{gap:22px}.pa .val{font-size:19px}}
 .badge.hit{background:#EAF3ED;color:var(--green)} .badge.miss{background:#FBEAE4;color:var(--red)}
+.humans{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+.hpick{flex:1;min-width:140px;padding:9px 12px;background:var(--bg);border-radius:10px;font-size:12.5px;color:var(--mut)}
+.hpick b{color:var(--ink)} .hpick .htag{font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:3px}
+.hpick .hres{font-weight:700;font-size:11.5px;margin-top:4px}
+.hpick .hres.hit{color:var(--green)} .hpick .hres.miss{color:var(--red)}
+.crowd{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.csig{flex:1;min-width:140px;padding:9px 12px;border-radius:10px;font-size:12.5px;color:var(--mut)}
+.csig.reddit{background:#FFF4E8;border:1px solid #F5DFC0} .csig.market{background:#EBF0FF;border:1px solid #C8D5F0}
+.csig b{color:var(--ink)} .csig .ctag{font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:3px}
+.csig.reddit .ctag{color:#C07000} .csig.market .ctag{color:#3050A0}
+.csig .cprobs{font-size:11px;margin-top:2px}
+.csig .cres{font-weight:700;font-size:11.5px;margin-top:4px}
+.csig .cres.hit{color:var(--green)} .csig .cres.miss{color:var(--red)}
 .pickline{font-size:15px;margin:10px 0 2px}
 .pickline b{color:var(--green)}
 .actline{font-size:14.5px;margin:4px 0 0;font-weight:600}
@@ -95,7 +108,7 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 </style></head><body>
 <header><div class="wrap"><div class="kick">UB Analytics · full outlook</div><h1>The complete <span class="y">72-match</span> board.</h1>
 <p class="sub">Every group-stage prediction in one table, with the scorecard filling in as the tournament unfolds.</p>
-<nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
+<nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="leaderboard.html">Leaderboard</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
 </div></header><main class="wrap">
 <h2>All 72 group-stage matches</h2>
 <p class="note">Probabilities read first team / draw / second team. Verdicts fill in automatically.</p>
@@ -109,5 +122,5 @@ document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('clic
  document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
  const g=b.dataset.g;document.querySelectorAll('#sched tr[data-g]').forEach(t=>{t.style.display=(g==='all'||t.dataset.g===g)?'':'none'});}));
 </script></main>
-<footer><div class="wrap">UB Analytics is an independent project, not affiliated with or endorsed by FIFA. Not betting advice. · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
+<footer><div class="wrap">UB Analytics is an independent, non-commercial educational project, not affiliated with or endorsed by FIFA or any institution. Not betting advice. · Data: <a href="https://github.com/martj42/international_results">martj42/international_results</a> (CC0) · 2014–2018 archive: <a href="https://ubanalytics.wordpress.com">ubanalytics.wordpress.com</a></div></footer>
 </body></html>
