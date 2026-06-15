@@ -74,6 +74,11 @@ details table{margin-top:10px}
 table{border-collapse:collapse;width:100%;font-size:13px}
 #sched{font-size:12px}
 #sched th{position:sticky;top:0;background:var(--bg);z-index:2;box-shadow:0 1px 0 var(--line)}
+#sched td.best{background:#EAF3ED;box-shadow:inset 0 0 0 2px var(--green);border-radius:4px}
+.mtabs{display:flex;gap:0;border-bottom:2px solid var(--line);margin-bottom:12px}
+.mtab{padding:8px 16px;font-size:12px;font-weight:700;letter-spacing:.05em;cursor:pointer;border:none;background:none;color:var(--mut);border-bottom:3px solid transparent;margin-bottom:-2px}
+.mtab:hover{color:var(--ink)} .mtab.on{color:var(--green);border-bottom-color:var(--green)}
+.mpanel{display:none} .mpanel.on{display:block}
 th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line)}
 th{color:var(--mut);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:700}
 tr:nth-child(even) td{background:#FAFBF8}
@@ -113,108 +118,196 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 <header><div class="wrap"><div class="kick">UB Analytics · est. 2014 · back for the 48-team era</div><h1>World Cup <span class="y">2026</span>, one matchday at a time.</h1>
 <p class="sub">One matchday at a time, the reasoning one click deep, every verdict on the record. <a href='legacy.html' style='color:var(--gold)'>Our third World Cup since 2014.</a></p>
 <nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="leaderboard.html">Leaderboard</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
-</div></header><main class="wrap"><div class="chips"><span class="chip"><b>5/12</b>picks correct</span><span class="chip"><b>0.688</b>running Brier</span><span class="chip"><b>-14%</b><abbr title="Brier Skill Score: improvement over a naive forecaster that always predicts historical base rates (49/23/28). Positive = the model adds real information.">skill vs naive</abbr></span><span class="chip"><b>13/16</b>2014 knockouts</span></div>
+</div></header><main class="wrap"><div class="chips"><span class="chip"><b>5/13</b>picks correct</span><span class="chip"><b>0.746</b>running Brier</span><span class="chip"><b>-19%</b><abbr title="Brier Skill Score: improvement over a naive forecaster that always predicts historical base rates (49/23/28). Positive = the model adds real information.">skill vs naive</abbr></span><span class="chip"><b>13/16</b>2014 knockouts</span></div>
 <h2>Matchday: 2026-06-15</h2>
-<p class="note">Predictions lock before kickoff. Last build: 2026-06-15 14:14 UTC.</p>
-<div class="card"><div class="meta"><span class="tag g">Group G</span><span class="tag">2026-06-15</span><span class="tag">Seattle, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/be.png" srcset="https://flagcdn.com/w56/be.png 2x" width="28" alt="" loading="lazy">Belgium<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/eg.png" srcset="https://flagcdn.com/w56/eg.png 2x" width="28" alt="" loading="lazy">Egypt</div><div class="bignum"><b>53%</b><span>Belgium by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Belgium by 1</div><div class="det">confidence 53%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Belgium by 1</b><div class="cprobs">Belgium 50% / draw 28% / Egypt 22%</div></div><div class="csig market"><span class="ctag">LSS (UKM)</span><b>Belgium by 1</b><div class="cprobs">Belgium 71% / draw 20% / Egypt 9%</div></div><div class="csig market"><span class="ctag">Market</span><b>Belgium by 1</b><div class="cprobs">Belgium 52% / draw 31% / Egypt 17%</div></div><div class="csig reddit"><span class="ctag">Reddit crowd</span><b>Belgium by 1</b><div class="cprobs">Belgium 52% / draw 27% / Egypt 21%</div></div></div><div class="bar"><i style="width:53.3%;background:var(--gold)"></i><i style="width:27.7%;background:var(--sage)"></i><i style="width:19.0%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/be.png" srcset="https://flagcdn.com/w48/be.png 2x" width="24" alt="" loading="lazy"> <b>Belgium</b> 53% · draw 28% · <img class="flag" src="https://flagcdn.com/w24/eg.png" srcset="https://flagcdn.com/w48/eg.png 2x" width="24" alt="" loading="lazy"> <b>Egypt</b> 19%</div><details><summary>How the model got here</summary><table>
+<p class="note">Predictions lock before kickoff. Last build: 2026-06-15 18:18 UTC.</p>
+<div class="card"><div class="meta"><span class="tag g">Group G</span><span class="tag">2026-06-15</span><span class="tag">Seattle, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/be.png" srcset="https://flagcdn.com/w56/be.png 2x" width="28" alt="" loading="lazy">Belgium<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/eg.png" srcset="https://flagcdn.com/w56/eg.png 2x" width="28" alt="" loading="lazy">Egypt</div><div class="bignum"><b>53%</b><span>Belgium by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Belgium by 1</div><div class="det">confidence 53%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Belgium by 1</b><div class="cprobs">Belgium 50% / draw 28% / Egypt 22%</div></div><div class="csig market"><span class="ctag">LSS (UKM)</span><b>Belgium by 1</b><div class="cprobs">Belgium 71% / draw 20% / Egypt 9%</div></div><div class="csig market"><span class="ctag">Market</span><b>Belgium by 1</b><div class="cprobs">Belgium 52% / draw 31% / Egypt 17%</div></div><div class="csig reddit"><span class="ctag">Reddit crowd</span><b>Belgium by 1</b><div class="cprobs">Belgium 52% / draw 27% / Egypt 21%</div></div></div><div class="bar"><i style="width:53.3%;background:var(--gold)"></i><i style="width:27.7%;background:var(--sage)"></i><i style="width:19.0%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/be.png" srcset="https://flagcdn.com/w48/be.png 2x" width="24" alt="" loading="lazy"> <b>Belgium</b> 53% · draw 28% · <img class="flag" src="https://flagcdn.com/w24/eg.png" srcset="https://flagcdn.com/w48/eg.png 2x" width="24" alt="" loading="lazy"> <b>Egypt</b> 19%</div><details><summary>How the model got here</summary><div class="mtabs">
+<button class="mtab on" onclick="document.querySelectorAll('.mpanel.m78784').forEach(p=>p.classList.remove('on'));document.getElementById('m78784_champ').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Champion</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m78784').forEach(p=>p.classList.remove('on'));document.getElementById('m78784_woc').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">WoC (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m78784').forEach(p=>p.classList.remove('on'));document.getElementById('m78784_lss').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">LSS (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m78784').forEach(p=>p.classList.remove('on'));document.getElementById('m78784_mkt').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Market</button>
+</div>
+<div id="m78784_champ" class="mpanel m78784 on"><table>
 <tr><th></th>
-<th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
-<th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
-<th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
-<th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
-<th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
+<th class="num"><abbr title="Elo rating">Elo</abbr></th>
+<th class="num"><abbr title="Goals scored per game, last 25">Attack</abbr></th>
+<th class="num"><abbr title="Goals conceded per game, last 25">Defence</abbr></th>
+<th class="num"><abbr title="Avg goal difference, last 10">Form</abbr></th>
+<th><abbr title="Venue and home advantage">Venue</abbr></th></tr>
 <tr><td><b>Belgium</b></td><td class="num">1976</td>
 <td class="num">2.28</td><td class="num">0.96</td><td class="num">+3.10</td>
 <td rowspan="2">Seattle (neutral)</td></tr>
 <tr><td><b>Egypt</b></td><td class="num">1821</td>
 <td class="num">1.20</td><td class="num">0.68</td><td class="num">+0.70</td></tr>
 </table>
-<p class="note" style="margin:8px 0 4px">Step 1, features: the model sees only differences:
-EloDiff +156, AttDiff +1.08, DefDiff -0.28, FormDiff +2.40, HomeFlag 0.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Belgium / draw / Egypt):</p>
+<p class="note">Features: EloDiff +156, AttDiff +1.08, DefDiff -0.28, FormDiff +2.40, HomeFlag 0.</p>
+<p class="note">Three models vote (Belgium / draw / Egypt):</p>
 <table>
 <tr><th>Model</th><th class="num">Belgium</th><th class="num">Draw</th><th class="num">Egypt</th><th class="num">Weight</th></tr>
 <tr><td>Logistic regression</td><td class="num">54%</td><td class="num">27%</td><td class="num">18%</td><td class="num">0.34</td></tr>
 <tr><td>Random forest</td><td class="num">54%</td><td class="num">30%</td><td class="num">16%</td><td class="num">0.33</td></tr>
 <tr><td>Poisson scoreline</td><td class="num">52%</td><td class="num">25%</td><td class="num">22%</td><td class="num">0.33</td></tr>
-<tr><td><b>Weighted ensemble</b></td><td class="num"><b>53%</b></td><td class="num"><b>28%</b></td><td class="num"><b>19%</b></td><td class="num">1.00</td></tr>
+<tr><td><b>Ensemble</b></td><td class="num"><b>53%</b></td><td class="num"><b>28%</b></td><td class="num"><b>19%</b></td><td class="num">1.00</td></tr>
 </table>
-<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 1.6 vs 0.9 goals,
-so the predicted margin is 1.6 − 0.9 ≈ 1.
-Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div><div class="card"><div class="meta"><span class="tag g">Group G</span><span class="tag">2026-06-15</span><span class="tag">Inglewood, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/ir.png" srcset="https://flagcdn.com/w56/ir.png 2x" width="28" alt="" loading="lazy">Iran<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/nz.png" srcset="https://flagcdn.com/w56/nz.png 2x" width="28" alt="" loading="lazy">New Zealand</div><div class="bignum"><b>58%</b><span>Iran by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Iran by 1</div><div class="det">confidence 58%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Iran by 1</b><div class="cprobs">Iran 52% / draw 28% / New Zealand 20%</div></div><div class="csig market"><span class="ctag">LSS (UKM)</span><b>Iran by 1</b><div class="cprobs">Iran 56% / draw 23% / New Zealand 21%</div></div><div class="csig market"><span class="ctag">Market</span><b>Iran by 1</b><div class="cprobs">Iran 58% / draw 22% / New Zealand 21%</div></div><div class="csig reddit"><span class="ctag">Reddit crowd</span><b>Iran by 1</b><div class="cprobs">Iran 65% / draw 19% / New Zealand 16%</div></div></div><div class="bar"><i style="width:58.4%;background:var(--gold)"></i><i style="width:24.4%;background:var(--sage)"></i><i style="width:17.2%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/ir.png" srcset="https://flagcdn.com/w48/ir.png 2x" width="24" alt="" loading="lazy"> <b>Iran</b> 58% · draw 24% · <img class="flag" src="https://flagcdn.com/w24/nz.png" srcset="https://flagcdn.com/w48/nz.png 2x" width="24" alt="" loading="lazy"> <b>New Zealand</b> 17%</div><details><summary>How the model got here</summary><table>
+<p class="note">xG 1.6 vs 0.9. Weights from Brier on 2,535 held-out matches. <a href="methods.html">Under the hood</a>.</p></div>
+<div id="m78784_woc" class="mpanel m78784"><p class="note"><b>Wisdom of Crowd (UKM)</b>: Bayesian-smoothed sentiment aggregation.</p>
+<table>
+<tr><th></th><th class="num">Belgium</th><th class="num">Draw</th><th class="num">Egypt</th></tr>
+<tr><td><b>WoC probability</b></td><td class="num"><b>50%</b></td><td class="num"><b>28%</b></td><td class="num"><b>22%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Belgium by 1</b>. Sources: Reddit r/soccer, betting exchange forums, Twitter polls. Recency-weighted (last 48h = 2x), users with betting history +30%. Bayesian prior: historical base rates 41/26/33. Manual adjustment for injuries, altitude, travel. Ref: Surowiecki (2004), <i>The Wisdom of Crowds</i>.</p></div>
+<div id="m78784_lss" class="mpanel m78784"><p class="note"><b>Latent State-Space v1 (UKM)</b>: dynamic bivariate Poisson.</p>
+<table>
+<tr><th></th><th class="num">Belgium</th><th class="num">Draw</th><th class="num">Egypt</th></tr>
+<tr><td><b>LSS probability</b></td><td class="num"><b>71%</b></td><td class="num"><b>20%</b></td><td class="num"><b>9%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Belgium by 1</b>. Team strengths update dynamically after each WC match (exponential smoothing, α = 0.15). Bivariate Poisson with ρ = 0.2 generates proper draw mass. Elo-adjusted scoring rates correct for opponent quality. Ref: Koopman and Lit (2015), JRSS A 178(1): 167–186.</p></div>
+<div id="m78784_mkt" class="mpanel m78784"><p class="note"><b>Betting market consensus</b>: implied probabilities from 14 bookmakers.</p>
+<table>
+<tr><th></th><th class="num">Belgium</th><th class="num">Draw</th><th class="num">Egypt</th></tr>
+<tr><td><b>Market probability</b></td><td class="num"><b>52%</b></td><td class="num"><b>31%</b></td><td class="num"><b>17%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Belgium by 1</b>. Decimal odds averaged across providers, overround removed. The market aggregates millions of informed bets; it is the academic standard benchmark for forecast evaluation. Ref: Štrumpelj (2014), Int. J. Forecasting 30(4): 934–943.</p></div></details></div><div class="card"><div class="meta"><span class="tag g">Group G</span><span class="tag">2026-06-15</span><span class="tag">Inglewood, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/ir.png" srcset="https://flagcdn.com/w56/ir.png 2x" width="28" alt="" loading="lazy">Iran<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/nz.png" srcset="https://flagcdn.com/w56/nz.png 2x" width="28" alt="" loading="lazy">New Zealand</div><div class="bignum"><b>58%</b><span>Iran by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Iran by 1</div><div class="det">confidence 58%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Iran by 1</b><div class="cprobs">Iran 52% / draw 28% / New Zealand 20%</div></div><div class="csig market"><span class="ctag">LSS (UKM)</span><b>Iran by 1</b><div class="cprobs">Iran 56% / draw 23% / New Zealand 21%</div></div><div class="csig market"><span class="ctag">Market</span><b>Iran by 1</b><div class="cprobs">Iran 58% / draw 22% / New Zealand 21%</div></div><div class="csig reddit"><span class="ctag">Reddit crowd</span><b>Iran by 1</b><div class="cprobs">Iran 65% / draw 19% / New Zealand 16%</div></div></div><div class="bar"><i style="width:58.4%;background:var(--gold)"></i><i style="width:24.4%;background:var(--sage)"></i><i style="width:17.2%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/ir.png" srcset="https://flagcdn.com/w48/ir.png 2x" width="24" alt="" loading="lazy"> <b>Iran</b> 58% · draw 24% · <img class="flag" src="https://flagcdn.com/w24/nz.png" srcset="https://flagcdn.com/w48/nz.png 2x" width="24" alt="" loading="lazy"> <b>New Zealand</b> 17%</div><details><summary>How the model got here</summary><div class="mtabs">
+<button class="mtab on" onclick="document.querySelectorAll('.mpanel.m84072').forEach(p=>p.classList.remove('on'));document.getElementById('m84072_champ').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Champion</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m84072').forEach(p=>p.classList.remove('on'));document.getElementById('m84072_woc').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">WoC (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m84072').forEach(p=>p.classList.remove('on'));document.getElementById('m84072_lss').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">LSS (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m84072').forEach(p=>p.classList.remove('on'));document.getElementById('m84072_mkt').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Market</button>
+</div>
+<div id="m84072_champ" class="mpanel m84072 on"><table>
 <tr><th></th>
-<th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
-<th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
-<th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
-<th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
-<th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
+<th class="num"><abbr title="Elo rating">Elo</abbr></th>
+<th class="num"><abbr title="Goals scored per game, last 25">Attack</abbr></th>
+<th class="num"><abbr title="Goals conceded per game, last 25">Defence</abbr></th>
+<th class="num"><abbr title="Avg goal difference, last 10">Form</abbr></th>
+<th><abbr title="Venue and home advantage">Venue</abbr></th></tr>
 <tr><td><b>Iran</b></td><td class="num">1907</td>
 <td class="num">1.92</td><td class="num">0.80</td><td class="num">+1.10</td>
 <td rowspan="2">Inglewood (neutral)</td></tr>
 <tr><td><b>New Zealand</b></td><td class="num">1748</td>
 <td class="num">2.32</td><td class="num">1.00</td><td class="num">-1.10</td></tr>
 </table>
-<p class="note" style="margin:8px 0 4px">Step 1, features: the model sees only differences:
-EloDiff +159, AttDiff -0.40, DefDiff +0.20, FormDiff +2.20, HomeFlag 0.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Iran / draw / New Zealand):</p>
+<p class="note">Features: EloDiff +159, AttDiff -0.40, DefDiff +0.20, FormDiff +2.20, HomeFlag 0.</p>
+<p class="note">Three models vote (Iran / draw / New Zealand):</p>
 <table>
 <tr><th>Model</th><th class="num">Iran</th><th class="num">Draw</th><th class="num">New Zealand</th><th class="num">Weight</th></tr>
 <tr><td>Logistic regression</td><td class="num">60%</td><td class="num">25%</td><td class="num">14%</td><td class="num">0.34</td></tr>
 <tr><td>Random forest</td><td class="num">52%</td><td class="num">26%</td><td class="num">22%</td><td class="num">0.33</td></tr>
 <tr><td>Poisson scoreline</td><td class="num">63%</td><td class="num">22%</td><td class="num">15%</td><td class="num">0.33</td></tr>
-<tr><td><b>Weighted ensemble</b></td><td class="num"><b>58%</b></td><td class="num"><b>24%</b></td><td class="num"><b>17%</b></td><td class="num">1.00</td></tr>
+<tr><td><b>Ensemble</b></td><td class="num"><b>58%</b></td><td class="num"><b>24%</b></td><td class="num"><b>17%</b></td><td class="num">1.00</td></tr>
 </table>
-<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 1.9 vs 0.8 goals,
-so the predicted margin is 1.9 − 0.8 ≈ 1.
-Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div><div class="card"><div class="meta"><span class="tag g">Group H</span><span class="tag">2026-06-15</span><span class="tag">Miami Gardens, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/sa.png" srcset="https://flagcdn.com/w56/sa.png 2x" width="28" alt="" loading="lazy">Saudi Arabia<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/uy.png" srcset="https://flagcdn.com/w56/uy.png 2x" width="28" alt="" loading="lazy">Uruguay</div><div class="bignum"><b>62%</b><span>Uruguay by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Uruguay by 1</div><div class="det">confidence 62%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Uruguay by 1</b><div class="cprobs">Saudi Arabia 12% / draw 22% / Uruguay 66%</div></div><div class="csig market"><span class="ctag">LSS (UKM)</span><b>Uruguay by 1</b><div class="cprobs">Saudi Arabia 10% / draw 30% / Uruguay 61%</div></div><div class="csig market"><span class="ctag">Market</span><b>Uruguay by 1</b><div class="cprobs">Saudi Arabia 16% / draw 21% / Uruguay 63%</div></div><div class="csig reddit"><span class="ctag">Reddit crowd</span><b>Uruguay by 1</b><div class="cprobs">Saudi Arabia 15% / draw 19% / Uruguay 66%</div></div></div><div class="bar"><i style="width:14.4%;background:var(--gold)"></i><i style="width:23.1%;background:var(--sage)"></i><i style="width:62.5%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/sa.png" srcset="https://flagcdn.com/w48/sa.png 2x" width="24" alt="" loading="lazy"> <b>Saudi Arabia</b> 14% · draw 23% · <img class="flag" src="https://flagcdn.com/w24/uy.png" srcset="https://flagcdn.com/w48/uy.png 2x" width="24" alt="" loading="lazy"> <b>Uruguay</b> 62%</div><details><summary>How the model got here</summary><table>
+<p class="note">xG 1.9 vs 0.8. Weights from Brier on 2,535 held-out matches. <a href="methods.html">Under the hood</a>.</p></div>
+<div id="m84072_woc" class="mpanel m84072"><p class="note"><b>Wisdom of Crowd (UKM)</b>: Bayesian-smoothed sentiment aggregation.</p>
+<table>
+<tr><th></th><th class="num">Iran</th><th class="num">Draw</th><th class="num">New Zealand</th></tr>
+<tr><td><b>WoC probability</b></td><td class="num"><b>52%</b></td><td class="num"><b>28%</b></td><td class="num"><b>20%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Iran by 1</b>. Sources: Reddit r/soccer, betting exchange forums, Twitter polls. Recency-weighted (last 48h = 2x), users with betting history +30%. Bayesian prior: historical base rates 41/26/33. Manual adjustment for injuries, altitude, travel. Ref: Surowiecki (2004), <i>The Wisdom of Crowds</i>.</p></div>
+<div id="m84072_lss" class="mpanel m84072"><p class="note"><b>Latent State-Space v1 (UKM)</b>: dynamic bivariate Poisson.</p>
+<table>
+<tr><th></th><th class="num">Iran</th><th class="num">Draw</th><th class="num">New Zealand</th></tr>
+<tr><td><b>LSS probability</b></td><td class="num"><b>56%</b></td><td class="num"><b>23%</b></td><td class="num"><b>21%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Iran by 1</b>. Team strengths update dynamically after each WC match (exponential smoothing, α = 0.15). Bivariate Poisson with ρ = 0.2 generates proper draw mass. Elo-adjusted scoring rates correct for opponent quality. Ref: Koopman and Lit (2015), JRSS A 178(1): 167–186.</p></div>
+<div id="m84072_mkt" class="mpanel m84072"><p class="note"><b>Betting market consensus</b>: implied probabilities from 10 bookmakers.</p>
+<table>
+<tr><th></th><th class="num">Iran</th><th class="num">Draw</th><th class="num">New Zealand</th></tr>
+<tr><td><b>Market probability</b></td><td class="num"><b>58%</b></td><td class="num"><b>22%</b></td><td class="num"><b>21%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Iran by 1</b>. Decimal odds averaged across providers, overround removed. The market aggregates millions of informed bets; it is the academic standard benchmark for forecast evaluation. Ref: Štrumpelj (2014), Int. J. Forecasting 30(4): 934–943.</p></div></details></div><div class="card"><div class="meta"><span class="tag g">Group H</span><span class="tag">2026-06-15</span><span class="tag">Miami Gardens, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/sa.png" srcset="https://flagcdn.com/w56/sa.png 2x" width="28" alt="" loading="lazy">Saudi Arabia<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/uy.png" srcset="https://flagcdn.com/w56/uy.png 2x" width="28" alt="" loading="lazy">Uruguay</div><div class="bignum"><b>62%</b><span>Uruguay by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Uruguay by 1</div><div class="det">confidence 62%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Uruguay by 1</b><div class="cprobs">Saudi Arabia 12% / draw 22% / Uruguay 66%</div></div><div class="csig market"><span class="ctag">LSS (UKM)</span><b>Uruguay by 1</b><div class="cprobs">Saudi Arabia 10% / draw 30% / Uruguay 61%</div></div><div class="csig market"><span class="ctag">Market</span><b>Uruguay by 1</b><div class="cprobs">Saudi Arabia 16% / draw 21% / Uruguay 63%</div></div><div class="csig reddit"><span class="ctag">Reddit crowd</span><b>Uruguay by 1</b><div class="cprobs">Saudi Arabia 15% / draw 19% / Uruguay 66%</div></div></div><div class="bar"><i style="width:14.4%;background:var(--gold)"></i><i style="width:23.1%;background:var(--sage)"></i><i style="width:62.5%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/sa.png" srcset="https://flagcdn.com/w48/sa.png 2x" width="24" alt="" loading="lazy"> <b>Saudi Arabia</b> 14% · draw 23% · <img class="flag" src="https://flagcdn.com/w24/uy.png" srcset="https://flagcdn.com/w48/uy.png 2x" width="24" alt="" loading="lazy"> <b>Uruguay</b> 62%</div><details><summary>How the model got here</summary><div class="mtabs">
+<button class="mtab on" onclick="document.querySelectorAll('.mpanel.m29872').forEach(p=>p.classList.remove('on'));document.getElementById('m29872_champ').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Champion</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m29872').forEach(p=>p.classList.remove('on'));document.getElementById('m29872_woc').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">WoC (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m29872').forEach(p=>p.classList.remove('on'));document.getElementById('m29872_lss').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">LSS (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m29872').forEach(p=>p.classList.remove('on'));document.getElementById('m29872_mkt').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Market</button>
+</div>
+<div id="m29872_champ" class="mpanel m29872 on"><table>
 <tr><th></th>
-<th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
-<th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
-<th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
-<th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
-<th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
+<th class="num"><abbr title="Elo rating">Elo</abbr></th>
+<th class="num"><abbr title="Goals scored per game, last 25">Attack</abbr></th>
+<th class="num"><abbr title="Goals conceded per game, last 25">Defence</abbr></th>
+<th class="num"><abbr title="Avg goal difference, last 10">Form</abbr></th>
+<th><abbr title="Venue and home advantage">Venue</abbr></th></tr>
 <tr><td><b>Saudi Arabia</b></td><td class="num">1706</td>
 <td class="num">1.08</td><td class="num">1.00</td><td class="num">-0.10</td>
 <td rowspan="2">Miami Gardens (neutral)</td></tr>
 <tr><td><b>Uruguay</b></td><td class="num">1985</td>
 <td class="num">1.04</td><td class="num">0.76</td><td class="num">+0.10</td></tr>
 </table>
-<p class="note" style="margin:8px 0 4px">Step 1, features: the model sees only differences:
-EloDiff -279, AttDiff +0.04, DefDiff -0.24, FormDiff -0.20, HomeFlag 0.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Saudi Arabia / draw / Uruguay):</p>
+<p class="note">Features: EloDiff -279, AttDiff +0.04, DefDiff -0.24, FormDiff -0.20, HomeFlag 0.</p>
+<p class="note">Three models vote (Saudi Arabia / draw / Uruguay):</p>
 <table>
 <tr><th>Model</th><th class="num">Saudi Arabia</th><th class="num">Draw</th><th class="num">Uruguay</th><th class="num">Weight</th></tr>
 <tr><td>Logistic regression</td><td class="num">12%</td><td class="num">23%</td><td class="num">65%</td><td class="num">0.34</td></tr>
 <tr><td>Random forest</td><td class="num">16%</td><td class="num">25%</td><td class="num">59%</td><td class="num">0.33</td></tr>
 <tr><td>Poisson scoreline</td><td class="num">15%</td><td class="num">22%</td><td class="num">63%</td><td class="num">0.33</td></tr>
-<tr><td><b>Weighted ensemble</b></td><td class="num"><b>14%</b></td><td class="num"><b>23%</b></td><td class="num"><b>62%</b></td><td class="num">1.00</td></tr>
+<tr><td><b>Ensemble</b></td><td class="num"><b>14%</b></td><td class="num"><b>23%</b></td><td class="num"><b>62%</b></td><td class="num">1.00</td></tr>
 </table>
-<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 0.8 vs 1.9 goals,
-so the predicted margin is 0.8 − 1.9 ≈ 1.
-Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div><div class="card"><div class="meta"><span class="tag g">Group H</span><span class="tag">2026-06-15</span><span class="tag">Atlanta, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/es.png" srcset="https://flagcdn.com/w56/es.png 2x" width="28" alt="" loading="lazy">Spain<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/cv.png" srcset="https://flagcdn.com/w56/cv.png 2x" width="28" alt="" loading="lazy">Cape Verde</div><div class="bignum"><b>83%</b><span>Spain by 3</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Spain by 3</div><div class="det">confidence 83%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Spain by 2</b><div class="cprobs">Spain 82% / draw 12% / Cape Verde 6%</div></div><div class="csig market"><span class="ctag">LSS (UKM)</span><b>Spain by 3</b><div class="cprobs">Spain 98% / draw 1% / Cape Verde 0%</div></div><div class="csig market"><span class="ctag">Market</span><b>Spain by 2</b><div class="cprobs">Spain 84% / draw 14% / Cape Verde 3%</div></div><div class="csig reddit"><span class="ctag">Reddit crowd</span><b>Spain by 2</b><div class="cprobs">Spain 88% / draw 9% / Cape Verde 3%</div></div></div><div class="bar"><i style="width:83.3%;background:var(--gold)"></i><i style="width:13.4%;background:var(--sage)"></i><i style="width:3.3%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/es.png" srcset="https://flagcdn.com/w48/es.png 2x" width="24" alt="" loading="lazy"> <b>Spain</b> 83% · draw 13% · <img class="flag" src="https://flagcdn.com/w24/cv.png" srcset="https://flagcdn.com/w48/cv.png 2x" width="24" alt="" loading="lazy"> <b>Cape Verde</b> 3%</div><details><summary>How the model got here</summary><table>
+<p class="note">xG 0.8 vs 1.9. Weights from Brier on 2,535 held-out matches. <a href="methods.html">Under the hood</a>.</p></div>
+<div id="m29872_woc" class="mpanel m29872"><p class="note"><b>Wisdom of Crowd (UKM)</b>: Bayesian-smoothed sentiment aggregation.</p>
+<table>
+<tr><th></th><th class="num">Saudi Arabia</th><th class="num">Draw</th><th class="num">Uruguay</th></tr>
+<tr><td><b>WoC probability</b></td><td class="num"><b>12%</b></td><td class="num"><b>22%</b></td><td class="num"><b>66%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Uruguay by 1</b>. Sources: Reddit r/soccer, betting exchange forums, Twitter polls. Recency-weighted (last 48h = 2x), users with betting history +30%. Bayesian prior: historical base rates 41/26/33. Manual adjustment for injuries, altitude, travel. Ref: Surowiecki (2004), <i>The Wisdom of Crowds</i>.</p></div>
+<div id="m29872_lss" class="mpanel m29872"><p class="note"><b>Latent State-Space v1 (UKM)</b>: dynamic bivariate Poisson.</p>
+<table>
+<tr><th></th><th class="num">Saudi Arabia</th><th class="num">Draw</th><th class="num">Uruguay</th></tr>
+<tr><td><b>LSS probability</b></td><td class="num"><b>10%</b></td><td class="num"><b>30%</b></td><td class="num"><b>61%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Uruguay by 1</b>. Team strengths update dynamically after each WC match (exponential smoothing, α = 0.15). Bivariate Poisson with ρ = 0.2 generates proper draw mass. Elo-adjusted scoring rates correct for opponent quality. Ref: Koopman and Lit (2015), JRSS A 178(1): 167–186.</p></div>
+<div id="m29872_mkt" class="mpanel m29872"><p class="note"><b>Betting market consensus</b>: implied probabilities from 13 bookmakers.</p>
+<table>
+<tr><th></th><th class="num">Saudi Arabia</th><th class="num">Draw</th><th class="num">Uruguay</th></tr>
+<tr><td><b>Market probability</b></td><td class="num"><b>16%</b></td><td class="num"><b>21%</b></td><td class="num"><b>63%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Uruguay by 1</b>. Decimal odds averaged across providers, overround removed. The market aggregates millions of informed bets; it is the academic standard benchmark for forecast evaluation. Ref: Štrumpelj (2014), Int. J. Forecasting 30(4): 934–943.</p></div></details></div><div class="card"><div class="meta"><span class="tag g">Group H</span><span class="tag">2026-06-15</span><span class="tag">Atlanta, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/es.png" srcset="https://flagcdn.com/w56/es.png 2x" width="28" alt="" loading="lazy">Spain<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/cv.png" srcset="https://flagcdn.com/w56/cv.png 2x" width="28" alt="" loading="lazy">Cape Verde</div><div class="bignum"><b>83%</b><span>Spain by 3</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Spain by 3</div><div class="det">confidence 83%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="val">Draw</div><div class="det">0–0</div><span class="badge miss">MISSED · Brier 1.44</span></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Spain by 2</b><div class="cprobs">Spain 82% / draw 12% / Cape Verde 6%</div><div class="cres miss">✘ Brier 1.45</div></div><div class="csig market"><span class="ctag">LSS (UKM)</span><b>Spain by 3</b><div class="cprobs">Spain 98% / draw 1% / Cape Verde 0%</div><div class="cres miss">✘ Brier 1.94</div></div><div class="csig market"><span class="ctag">Market</span><b>Spain by 2</b><div class="cprobs">Spain 84% / draw 14% / Cape Verde 3%</div><div class="cres miss">✘ Brier 1.45</div></div><div class="csig reddit"><span class="ctag">Reddit crowd</span><b>Spain by 2</b><div class="cprobs">Spain 88% / draw 9% / Cape Verde 3%</div><div class="cres miss">✘ Brier 1.62</div></div></div><div class="bar"><i style="width:83.3%;background:var(--gold)"></i><i style="width:13.4%;background:var(--sage)"></i><i style="width:3.3%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/es.png" srcset="https://flagcdn.com/w48/es.png 2x" width="24" alt="" loading="lazy"> <b>Spain</b> 83% · draw 13% · <img class="flag" src="https://flagcdn.com/w24/cv.png" srcset="https://flagcdn.com/w48/cv.png 2x" width="24" alt="" loading="lazy"> <b>Cape Verde</b> 3%</div><details><summary>How the model got here</summary><div class="mtabs">
+<button class="mtab on" onclick="document.querySelectorAll('.mpanel.m68168').forEach(p=>p.classList.remove('on'));document.getElementById('m68168_champ').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Champion</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m68168').forEach(p=>p.classList.remove('on'));document.getElementById('m68168_woc').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">WoC (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m68168').forEach(p=>p.classList.remove('on'));document.getElementById('m68168_lss').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">LSS (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m68168').forEach(p=>p.classList.remove('on'));document.getElementById('m68168_mkt').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Market</button>
+</div>
+<div id="m68168_champ" class="mpanel m68168 on"><table>
 <tr><th></th>
-<th class="num"><abbr title="Strength rating updated after every match since 1872. Beating a stronger side gains more points; the world average is ~1500 and elite teams sit above 2000. Hosts get +100 for true home games.">Elo</abbr></th>
-<th class="num"><abbr title="Attack rate: average goals SCORED per game over the team's last 25 internationals.">Attack</abbr></th>
-<th class="num"><abbr title="Defence rate: average goals CONCEDED per game over the last 25 internationals. Lower is better.">Defence</abbr></th>
-<th class="num"><abbr title="Form: average goal difference over the last 10 matches. Positive means winning recently, and by how much on average.">Form</abbr></th>
-<th><abbr title="Venue: hosts (USA, Mexico, Canada) playing in their own country get home advantage; every other match is treated as neutral ground.">Venue</abbr></th></tr>
+<th class="num"><abbr title="Elo rating">Elo</abbr></th>
+<th class="num"><abbr title="Goals scored per game, last 25">Attack</abbr></th>
+<th class="num"><abbr title="Goals conceded per game, last 25">Defence</abbr></th>
+<th class="num"><abbr title="Avg goal difference, last 10">Form</abbr></th>
+<th><abbr title="Venue and home advantage">Venue</abbr></th></tr>
 <tr><td><b>Spain</b></td><td class="num">2240</td>
 <td class="num">2.56</td><td class="num">0.92</td><td class="num">+2.40</td>
 <td rowspan="2">Atlanta (neutral)</td></tr>
 <tr><td><b>Cape Verde</b></td><td class="num">1662</td>
 <td class="num">1.24</td><td class="num">1.04</td><td class="num">+0.40</td></tr>
 </table>
-<p class="note" style="margin:8px 0 4px">Step 1, features: the model sees only differences:
-EloDiff +578, AttDiff +1.32, DefDiff +0.12, FormDiff +2.00, HomeFlag 0.</p><p class="note" style="margin:8px 0 4px">Step 2, three models vote (Spain / draw / Cape Verde):</p>
+<p class="note">Features: EloDiff +578, AttDiff +1.32, DefDiff +0.12, FormDiff +2.00, HomeFlag 0.</p>
+<p class="note">Three models vote (Spain / draw / Cape Verde):</p>
 <table>
 <tr><th>Model</th><th class="num">Spain</th><th class="num">Draw</th><th class="num">Cape Verde</th><th class="num">Weight</th></tr>
 <tr><td>Logistic regression</td><td class="num">86%</td><td class="num">12%</td><td class="num">2%</td><td class="num">0.34</td></tr>
 <tr><td>Random forest</td><td class="num">76%</td><td class="num">19%</td><td class="num">4%</td><td class="num">0.33</td></tr>
 <tr><td>Poisson scoreline</td><td class="num">87%</td><td class="num">10%</td><td class="num">4%</td><td class="num">0.33</td></tr>
-<tr><td><b>Weighted ensemble</b></td><td class="num"><b>83%</b></td><td class="num"><b>13%</b></td><td class="num"><b>3%</b></td><td class="num">1.00</td></tr>
+<tr><td><b>Ensemble</b></td><td class="num"><b>83%</b></td><td class="num"><b>13%</b></td><td class="num"><b>3%</b></td><td class="num">1.00</td></tr>
 </table>
-<p class="note" style="margin:8px 0 0">Step 3, goal difference: the Poisson model expects 3.0 vs 0.5 goals,
-so the predicted margin is 3.0 − 0.5 ≈ 3.
-Weights come from each model's Brier score on 2,535 held-out internationals (2024–26); details <a href="methods.html">under the hood</a>.</p></details></div>
+<p class="note">xG 3.0 vs 0.5. Weights from Brier on 2,535 held-out matches. <a href="methods.html">Under the hood</a>.</p></div>
+<div id="m68168_woc" class="mpanel m68168"><p class="note"><b>Wisdom of Crowd (UKM)</b>: Bayesian-smoothed sentiment aggregation.</p>
+<table>
+<tr><th></th><th class="num">Spain</th><th class="num">Draw</th><th class="num">Cape Verde</th></tr>
+<tr><td><b>WoC probability</b></td><td class="num"><b>82%</b></td><td class="num"><b>12%</b></td><td class="num"><b>6%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Spain by 2</b>. Sources: Reddit r/soccer, betting exchange forums, Twitter polls. Recency-weighted (last 48h = 2x), users with betting history +30%. Bayesian prior: historical base rates 41/26/33. Manual adjustment for injuries, altitude, travel. Ref: Surowiecki (2004), <i>The Wisdom of Crowds</i>.</p></div>
+<div id="m68168_lss" class="mpanel m68168"><p class="note"><b>Latent State-Space v1 (UKM)</b>: dynamic bivariate Poisson.</p>
+<table>
+<tr><th></th><th class="num">Spain</th><th class="num">Draw</th><th class="num">Cape Verde</th></tr>
+<tr><td><b>LSS probability</b></td><td class="num"><b>98%</b></td><td class="num"><b>1%</b></td><td class="num"><b>0%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Spain by 3</b>. Team strengths update dynamically after each WC match (exponential smoothing, α = 0.15). Bivariate Poisson with ρ = 0.2 generates proper draw mass. Elo-adjusted scoring rates correct for opponent quality. Ref: Koopman and Lit (2015), JRSS A 178(1): 167–186.</p></div>
+<div id="m68168_mkt" class="mpanel m68168"><p class="note"><b>Betting market consensus</b>: implied probabilities from 8 bookmakers.</p>
+<table>
+<tr><th></th><th class="num">Spain</th><th class="num">Draw</th><th class="num">Cape Verde</th></tr>
+<tr><td><b>Market probability</b></td><td class="num"><b>84%</b></td><td class="num"><b>14%</b></td><td class="num"><b>3%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Spain by 2</b>. Decimal odds averaged across providers, overround removed. The market aggregates millions of informed bets; it is the academic standard benchmark for forecast evaluation. Ref: Štrumpelj (2014), Int. J. Forecasting 30(4): 934–943.</p></div></details></div>
 <h2>Latest verdicts</h2>
-<div class="verdict hit"><div class="mark">✔ correct · 2026-06-14 · Group F</div><div class="pv">Predicted outcome: <b>Sweden wins</b> with goal difference of 1. Confidence score 0.36 (max 1).</div><div class="av">Actual outcome: Sweden won by goal difference of 4 (5–1). Brier 0.62.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-14 · Group F</div><div class="pv">Predicted outcome: <b>Japan wins</b> with goal difference of 1. Confidence score 0.36 (max 1).</div><div class="av">Actual outcome: Match drawn (2–2). Brier 0.76.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-14 · Group E</div><div class="pv">Predicted outcome: <b>Germany wins</b> with goal difference of 2. Confidence score 0.76 (max 1).</div><div class="av">Actual outcome: Germany won by goal difference of 6 (7–1). Brier 0.09.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-14 · Group E</div><div class="pv">Predicted outcome: <b>Ecuador wins</b> with goal difference of 1. Confidence score 0.61 (max 1).</div><div class="av">Actual outcome: Ivory Coast won by goal difference of 1 (1–0). Brier 1.13.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-13 · Group B</div><div class="pv">Predicted outcome: <b>Switzerland wins</b> with goal difference of 2. Confidence score 0.79 (max 1).</div><div class="av">Actual outcome: Match drawn (1–1). Brier 1.36.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-13 · Group C</div><div class="pv">Predicted outcome: <b>Brazil wins</b> with goal difference of 1. Confidence score 0.42 (max 1).</div><div class="av">Actual outcome: Match drawn (1–1). Brier 0.76.</div></div>
+<div class="verdict miss"><div class="mark">✘ missed · 2026-06-15 · Group H</div><div class="pv">Predicted outcome: <b>Spain wins</b> with goal difference of 3. Confidence score 0.83 (max 1).</div><div class="av">Actual outcome: Match drawn (0–0). Brier 1.44.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-14 · Group F</div><div class="pv">Predicted outcome: <b>Sweden wins</b> with goal difference of 1. Confidence score 0.36 (max 1).</div><div class="av">Actual outcome: Sweden won by goal difference of 4 (5–1). Brier 0.62.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-14 · Group F</div><div class="pv">Predicted outcome: <b>Japan wins</b> with goal difference of 1. Confidence score 0.36 (max 1).</div><div class="av">Actual outcome: Match drawn (2–2). Brier 0.76.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-14 · Group E</div><div class="pv">Predicted outcome: <b>Germany wins</b> with goal difference of 2. Confidence score 0.76 (max 1).</div><div class="av">Actual outcome: Germany won by goal difference of 6 (7–1). Brier 0.09.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-14 · Group E</div><div class="pv">Predicted outcome: <b>Ecuador wins</b> with goal difference of 1. Confidence score 0.61 (max 1).</div><div class="av">Actual outcome: Ivory Coast won by goal difference of 1 (1–0). Brier 1.13.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-13 · Group B</div><div class="pv">Predicted outcome: <b>Switzerland wins</b> with goal difference of 2. Confidence score 0.79 (max 1).</div><div class="av">Actual outcome: Match drawn (1–1). Brier 1.36.</div></div>
 <p class="note"><a href="schedule.html">Full 72-match outlook and complete scorecard →</a></p>
 <div class="sub-box" id="subscribe"><h2>Every matchday's predictions by email</h2>
 <p class="note">One email per matchday. Unsubscribe anytime.</p>
