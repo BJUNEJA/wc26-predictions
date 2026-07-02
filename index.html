@@ -118,13 +118,106 @@ img.fig{max-width:100%;border-radius:12px;border:1px solid var(--line);margin:10
 <header><div class="wrap"><div class="kick">UB Analytics · est. 2014 · back for the 48-team era</div><h1>World Cup <span class="y">2026</span>, one matchday at a time.</h1>
 <p class="sub">One matchday at a time, the reasoning one click deep, every verdict on the record. <a href='legacy.html' style='color:var(--gold)'>Our third World Cup since 2014.</a></p>
 <nav><a href="index.html">Matchday</a><a href="schedule.html">Schedule</a><a href="methods.html">Under the hood</a><a href="legacy.html">Since 2014</a><a href="leaderboard.html">Leaderboard</a><a href="about.html">About us</a><a href="index.html#subscribe">Subscribe</a></nav>
-</div></header><main class="wrap"><div class="chips"><span class="chip"><b>44/72</b>picks correct</span><span class="chip"><b>0.537</b>running Brier</span><span class="chip"><b>+17%</b><abbr title="Brier Skill Score: improvement over a naive forecaster that always predicts historical base rates (49/23/28). Positive = the model adds real information.">skill vs naive</abbr></span><span class="chip"><b>13/16</b>2014 knockouts</span></div>
-<h2>Matchday: None</h2>
-<p class="note">Predictions lock before kickoff. Last build: 2026-06-30 08:49 UTC.</p>
-
+</div></header><main class="wrap"><div class="chips"><span class="chip"><b>49/79</b>picks correct</span><span class="chip"><b>0.531</b>running Brier</span><span class="chip"><b>+16%</b><abbr title="Brier Skill Score: improvement over a naive forecaster that always predicts historical base rates (49/23/28). Positive = the model adds real information.">skill vs naive</abbr></span><span class="chip"><b>13/16</b>2014 knockouts</span></div>
+<h2>Matchday: 2026-07-01</h2>
+<p class="note">Predictions lock before kickoff. Last build: 2026-07-02 02:08 UTC.</p>
+<div class="card"><div class="meta"><span class="tag g">Round of 32</span><span class="tag">2026-07-01</span><span class="tag">Atlanta, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/gb-eng.png" srcset="https://flagcdn.com/w56/gb-eng.png 2x" width="28" alt="" loading="lazy">England<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/cd.png" srcset="https://flagcdn.com/w56/cd.png 2x" width="28" alt="" loading="lazy">DR Congo</div><div class="bignum"><b>77%</b><span>England by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">England by 1</div><div class="det">confidence 77%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>England advances</b><div class="cprobs">England 90% / draw 0% / DR Congo 10%</div></div></div><div class="bar"><i style="width:77.0%;background:var(--gold)"></i><i style="width:0.0%;background:var(--sage)"></i><i style="width:23.0%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/gb-eng.png" srcset="https://flagcdn.com/w48/gb-eng.png 2x" width="24" alt="" loading="lazy"> <b>England</b> 77% · draw 0% · <img class="flag" src="https://flagcdn.com/w24/cd.png" srcset="https://flagcdn.com/w48/cd.png 2x" width="24" alt="" loading="lazy"> <b>DR Congo</b> 23%</div><details><summary>How the model got here</summary><div class="mtabs">
+<button class="mtab on" onclick="document.querySelectorAll('.mpanel.m28732').forEach(p=>p.classList.remove('on'));document.getElementById('m28732_champ').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Champion</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m28732').forEach(p=>p.classList.remove('on'));document.getElementById('m28732_woc').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">WoC (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m28732').forEach(p=>p.classList.remove('on'));document.getElementById('m28732_lss').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">LSS (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m28732').forEach(p=>p.classList.remove('on'));document.getElementById('m28732_mkt').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Market</button>
+</div>
+<div id="m28732_champ" class="mpanel m28732 on"><table>
+<tr><th></th>
+<th class="num"><abbr title="Elo rating after all 72 group matches">Elo</abbr></th>
+<th class="num"><abbr title="Goals scored per game, last 25">Attack</abbr></th>
+<th class="num"><abbr title="Goals conceded per game, last 25">Defence</abbr></th>
+<th class="num"><abbr title="Avg goal difference, last 10">Form</abbr></th>
+<th>Venue</th></tr>
+<tr><td><b>England</b></td><td class="num">2087</td>
+<td class="num">2.24</td><td class="num">0.52</td><td class="num">+1.60</td>
+<td rowspan="2">Atlanta (neutral)</td></tr>
+<tr><td><b>DR Congo</b></td><td class="num">1784</td>
+<td class="num">1.36</td><td class="num">0.64</td><td class="num">+0.50</td></tr>
+</table>
+<p class="note">Knockout ensemble: 50% Elo win probability, 40% Poisson scoreline with the draw mass
+redistributed proportionally to the two decisive outcomes (level matches go to extra time and penalties,
+so a draw cannot be the final result), 10% form adjustment. No home-advantage term at neutral knockout venues.
+Team strengths shown have absorbed all 72 group-stage results, which is the one planned rerun
+of the frozen pipeline. xG 1.1 vs 0.5. <a href="methods.html">Under the hood</a>.</p></div>
+<div id="m28732_woc" class="mpanel m28732"><p class="note"><b>Wisdom of Crowd (UKM)</b>: Bayesian-smoothed sentiment aggregation.</p>
+<table>
+<tr><th></th><th class="num">England</th><th class="num">Draw</th><th class="num">DR Congo</th></tr>
+<tr><td><b>WoC probability</b></td><td class="num"><b>90%</b></td><td class="num"><b>0%</b></td><td class="num"><b>10%</b></td></tr>
+</table>
+<p class="note">Pick: <b>England advances</b>. Sources: Reddit r/soccer, betting exchange forums, Twitter polls. Recency-weighted (last 48h = 2x), users with betting history +30%. Bayesian prior: historical base rates 41/26/33. Manual adjustment for injuries, altitude, travel. Ref: Surowiecki (2004), <i>The Wisdom of Crowds</i>.</p></div>
+<div id="m28732_lss" class="mpanel m28732"><p class="note">No LSS prediction available for this match.</p></div>
+<div id="m28732_mkt" class="mpanel m28732"><p class="note">No market data available for this match.</p></div></details></div><div class="card"><div class="meta"><span class="tag g">Round of 32</span><span class="tag">2026-07-01</span><span class="tag">Seattle, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/be.png" srcset="https://flagcdn.com/w56/be.png 2x" width="28" alt="" loading="lazy">Belgium<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/sn.png" srcset="https://flagcdn.com/w56/sn.png 2x" width="28" alt="" loading="lazy">Senegal</div><div class="bignum"><b>54%</b><span>Belgium by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">Belgium by 1</div><div class="det">confidence 54%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>Belgium advances</b><div class="cprobs">Belgium 82% / draw 0% / Senegal 18%</div></div></div><div class="bar"><i style="width:54.2%;background:var(--gold)"></i><i style="width:0.0%;background:var(--sage)"></i><i style="width:45.8%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/be.png" srcset="https://flagcdn.com/w48/be.png 2x" width="24" alt="" loading="lazy"> <b>Belgium</b> 54% · draw 0% · <img class="flag" src="https://flagcdn.com/w24/sn.png" srcset="https://flagcdn.com/w48/sn.png 2x" width="24" alt="" loading="lazy"> <b>Senegal</b> 46%</div><details><summary>How the model got here</summary><div class="mtabs">
+<button class="mtab on" onclick="document.querySelectorAll('.mpanel.m76807').forEach(p=>p.classList.remove('on'));document.getElementById('m76807_champ').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Champion</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m76807').forEach(p=>p.classList.remove('on'));document.getElementById('m76807_woc').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">WoC (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m76807').forEach(p=>p.classList.remove('on'));document.getElementById('m76807_lss').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">LSS (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m76807').forEach(p=>p.classList.remove('on'));document.getElementById('m76807_mkt').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Market</button>
+</div>
+<div id="m76807_champ" class="mpanel m76807 on"><table>
+<tr><th></th>
+<th class="num"><abbr title="Elo rating after all 72 group matches">Elo</abbr></th>
+<th class="num"><abbr title="Goals scored per game, last 25">Attack</abbr></th>
+<th class="num"><abbr title="Goals conceded per game, last 25">Defence</abbr></th>
+<th class="num"><abbr title="Avg goal difference, last 10">Form</abbr></th>
+<th>Venue</th></tr>
+<tr><td><b>Belgium</b></td><td class="num">1979</td>
+<td class="num">2.32</td><td class="num">1.00</td><td class="num">+2.30</td>
+<td rowspan="2">Seattle (neutral)</td></tr>
+<tr><td><b>Senegal</b></td><td class="num">1886</td>
+<td class="num">2.28</td><td class="num">0.84</td><td class="num">+0.40</td></tr>
+</table>
+<p class="note">Knockout ensemble: 50% Elo win probability, 40% Poisson scoreline with the draw mass
+redistributed proportionally to the two decisive outcomes (level matches go to extra time and penalties,
+so a draw cannot be the final result), 10% form adjustment. No home-advantage term at neutral knockout venues.
+Team strengths shown have absorbed all 72 group-stage results, which is the one planned rerun
+of the frozen pipeline. xG 1.4 vs 1.7. <a href="methods.html">Under the hood</a>.</p></div>
+<div id="m76807_woc" class="mpanel m76807"><p class="note"><b>Wisdom of Crowd (UKM)</b>: Bayesian-smoothed sentiment aggregation.</p>
+<table>
+<tr><th></th><th class="num">Belgium</th><th class="num">Draw</th><th class="num">Senegal</th></tr>
+<tr><td><b>WoC probability</b></td><td class="num"><b>82%</b></td><td class="num"><b>0%</b></td><td class="num"><b>18%</b></td></tr>
+</table>
+<p class="note">Pick: <b>Belgium advances</b>. Sources: Reddit r/soccer, betting exchange forums, Twitter polls. Recency-weighted (last 48h = 2x), users with betting history +30%. Bayesian prior: historical base rates 41/26/33. Manual adjustment for injuries, altitude, travel. Ref: Surowiecki (2004), <i>The Wisdom of Crowds</i>.</p></div>
+<div id="m76807_lss" class="mpanel m76807"><p class="note">No LSS prediction available for this match.</p></div>
+<div id="m76807_mkt" class="mpanel m76807"><p class="note">No market data available for this match.</p></div></details></div><div class="card"><div class="meta"><span class="tag g">Round of 32</span><span class="tag">2026-07-01</span><span class="tag">Santa Clara, United States</span></div><div class="duel"><div class="teams"><img class="flag" src="https://flagcdn.com/w28/us.png" srcset="https://flagcdn.com/w56/us.png 2x" width="28" alt="" loading="lazy">United States<span class="vs">vs</span><img class="flag" src="https://flagcdn.com/w28/ba.png" srcset="https://flagcdn.com/w56/ba.png 2x" width="28" alt="" loading="lazy">Bosnia and Herzegovina</div><div class="bignum"><b>72%</b><span>United States by 1</span></div></div><div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-top:6px">Champion model prediction</div><div class="pa"><div><div class="lbl">Predicted</div><div class="val">United States by 1</div><div class="det">confidence 72%</div></div><div class="arrow">→</div><div><div class="lbl">Actual</div><div class="pend">awaiting kickoff</div></div></div><div class="crowd"><div class="csig reddit"><span class="ctag">WoC (UKM)</span><b>United States advances</b><div class="cprobs">United States 80% / draw 0% / Bosnia and Herzegovina 20%</div></div></div><div class="bar"><i style="width:72.2%;background:var(--gold)"></i><i style="width:0.0%;background:var(--sage)"></i><i style="width:27.8%;background:var(--red)"></i></div><div class="legend"><img class="flag" src="https://flagcdn.com/w24/us.png" srcset="https://flagcdn.com/w48/us.png 2x" width="24" alt="" loading="lazy"> <b>United States</b> 72% · draw 0% · <img class="flag" src="https://flagcdn.com/w24/ba.png" srcset="https://flagcdn.com/w48/ba.png 2x" width="24" alt="" loading="lazy"> <b>Bosnia and Herzegovina</b> 28%</div><details><summary>How the model got here</summary><div class="mtabs">
+<button class="mtab on" onclick="document.querySelectorAll('.mpanel.m48598').forEach(p=>p.classList.remove('on'));document.getElementById('m48598_champ').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Champion</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m48598').forEach(p=>p.classList.remove('on'));document.getElementById('m48598_woc').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">WoC (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m48598').forEach(p=>p.classList.remove('on'));document.getElementById('m48598_lss').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">LSS (UKM)</button>
+<button class="mtab" onclick="document.querySelectorAll('.mpanel.m48598').forEach(p=>p.classList.remove('on'));document.getElementById('m48598_mkt').classList.add('on');this.parentNode.querySelectorAll('.mtab').forEach(t=>t.classList.remove('on'));this.classList.add('on')">Market</button>
+</div>
+<div id="m48598_champ" class="mpanel m48598 on"><table>
+<tr><th></th>
+<th class="num"><abbr title="Elo rating after all 72 group matches">Elo</abbr></th>
+<th class="num"><abbr title="Goals scored per game, last 25">Attack</abbr></th>
+<th class="num"><abbr title="Goals conceded per game, last 25">Defence</abbr></th>
+<th class="num"><abbr title="Avg goal difference, last 10">Form</abbr></th>
+<th>Venue</th></tr>
+<tr><td><b>United States</b></td><td class="num">1942</td>
+<td class="num">1.88</td><td class="num">1.48</td><td class="num">+0.50</td>
+<td rowspan="2">Santa Clara (neutral)</td></tr>
+<tr><td><b>Bosnia and Herzegovina</b></td><td class="num">1702</td>
+<td class="num">1.36</td><td class="num">1.60</td><td class="num">+0.40</td></tr>
+</table>
+<p class="note">Knockout ensemble: 50% Elo win probability, 40% Poisson scoreline with the draw mass
+redistributed proportionally to the two decisive outcomes (level matches go to extra time and penalties,
+so a draw cannot be the final result), 10% form adjustment. No home-advantage term at neutral knockout venues.
+Team strengths shown have absorbed all 72 group-stage results, which is the one planned rerun
+of the frozen pipeline. xG 2.2 vs 1.5. <a href="methods.html">Under the hood</a>.</p></div>
+<div id="m48598_woc" class="mpanel m48598"><p class="note"><b>Wisdom of Crowd (UKM)</b>: Bayesian-smoothed sentiment aggregation.</p>
+<table>
+<tr><th></th><th class="num">United States</th><th class="num">Draw</th><th class="num">Bosnia and Herzegovina</th></tr>
+<tr><td><b>WoC probability</b></td><td class="num"><b>80%</b></td><td class="num"><b>0%</b></td><td class="num"><b>20%</b></td></tr>
+</table>
+<p class="note">Pick: <b>United States advances</b>. Sources: Reddit r/soccer, betting exchange forums, Twitter polls. Recency-weighted (last 48h = 2x), users with betting history +30%. Bayesian prior: historical base rates 41/26/33. Manual adjustment for injuries, altitude, travel. Ref: Surowiecki (2004), <i>The Wisdom of Crowds</i>.</p></div>
+<div id="m48598_lss" class="mpanel m48598"><p class="note">No LSS prediction available for this match.</p></div>
+<div id="m48598_mkt" class="mpanel m48598"><p class="note">No market data available for this match.</p></div></details></div>
 <h2>Latest verdicts</h2>
-<div class="verdict miss"><div class="mark">✘ missed · 2026-06-27 · Group J</div><div class="pv">Predicted outcome: <b>Algeria wins</b> with goal difference of 1. Confidence score 0.36 (max 1).</div><div class="av">Actual outcome: Match drawn (3–3). Brier 0.74.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-27 · Group J</div><div class="pv">Predicted outcome: <b>Argentina wins</b> with goal difference of 2. Confidence score 0.76 (max 1).</div><div class="av">Actual outcome: Argentina won by goal difference of 2 (1–3). Brier 0.10.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-27 · Group L</div><div class="pv">Predicted outcome: <b>England wins</b> with goal difference of 1. Confidence score 0.62 (max 1).</div><div class="av">Actual outcome: England won by goal difference of 2 (0–2). Brier 0.22.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-27 · Group L</div><div class="pv">Predicted outcome: <b>Croatia wins</b> with goal difference of 2. Confidence score 0.73 (max 1).</div><div class="av">Actual outcome: Croatia won by goal difference of 1 (2–1). Brier 0.11.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-27 · Group K</div><div class="pv">Predicted outcome: <b>Colombia wins</b> with goal difference of 1. Confidence score 0.42 (max 1).</div><div class="av">Actual outcome: Match drawn (0–0). Brier 0.76.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-27 · Group K</div><div class="pv">Predicted outcome: <b>Uzbekistan wins</b> with goal difference of 1. Confidence score 0.39 (max 1).</div><div class="av">Actual outcome: DR Congo won by goal difference of 2 (3–1). Brier 0.67.</div></div>
-<p class="note"><a href="schedule.html">Full 72-match outlook and complete scorecard →</a></p>
+<div class="verdict hit"><div class="mark">✔ correct · 2026-06-30 · Round of 32</div><div class="pv">Predicted outcome: <b>Mexico wins</b> with goal difference of 1. Confidence score 0.54 (max 1).</div><div class="av">Actual outcome: Mexico won by goal difference of 2 (2–0). Brier 0.43.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-30 · Round of 32</div><div class="pv">Predicted outcome: <b>France wins</b> with goal difference of 1. Confidence score 0.79 (max 1).</div><div class="av">Actual outcome: France won by goal difference of 3 (3–0). Brier 0.09.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-30 · Round of 32</div><div class="pv">Predicted outcome: <b>Norway wins</b> with goal difference of 1. Confidence score 0.54 (max 1).</div><div class="av">Actual outcome: Norway won by goal difference of 1 (1–2). Brier 0.42.</div></div><div class="verdict hit"><div class="mark">✔ correct · 2026-06-29 · Round of 32</div><div class="pv">Predicted outcome: <b>Morocco wins</b> with goal difference of 1. Confidence score 0.58 (max 1).</div><div class="av">Actual outcome: Level 1–1 after regulation; Morocco advanced on extra time or penalties. Brier 0.35.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-29 · Round of 32</div><div class="pv">Predicted outcome: <b>Germany wins</b> with goal difference of 1. Confidence score 0.75 (max 1).</div><div class="av">Actual outcome: Level 1–1 after regulation; Paraguay advanced on extra time or penalties. Brier 1.14.</div></div><div class="verdict miss"><div class="mark">✘ missed · 2026-06-29 · Round of 32</div><div class="pv">Predicted outcome: <b>Japan wins</b> with goal difference of 1. Confidence score 0.56 (max 1).</div><div class="av">Actual outcome: Brazil won by goal difference of 1 (2–1). Brier 0.63.</div></div>
+<p class="note"><a href="schedule.html">Full match board: 72 group matches, the Round of 32, and the complete scorecard →</a></p>
 <div class="sub-box" id="subscribe"><h2>Every matchday's predictions by email</h2>
 <p class="note">One email per matchday. Unsubscribe anytime.</p>
 <form action="https://buttondown.com/api/emails/embed-subscribe/bhupinder_singh" method="post" target="popupwindow">
